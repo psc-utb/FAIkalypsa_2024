@@ -2891,12 +2891,24 @@ PrefabInstance:
       value: Ghoul@Animations
       objectReference: {fileID: 0}
     - target: {fileID: 400144, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.76
       objectReference: {fileID: 0}
     - target: {fileID: 400144, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400144, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30952,12 +30964,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 3a8a6390b3dcafe488305958b217ef34, type: 2}
     - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.988057
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       propertyPath: m_LocalPosition.z
