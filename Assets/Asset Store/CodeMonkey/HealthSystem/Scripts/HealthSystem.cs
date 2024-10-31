@@ -20,6 +20,7 @@ namespace CodeMonkey.HealthSystemCM {
     /// Use on Units, Buildings, Items; anything you want to have some health
     /// Use HealthSystemComponent if you want to add a HealthSystem directly to a Game Object instead of using the C# constructor
     /// </summary>
+    [Serializable]
     public class HealthSystem {
 
         public event EventHandler OnHealthChanged;
@@ -28,7 +29,9 @@ namespace CodeMonkey.HealthSystemCM {
         public event EventHandler OnHealed;
         public event EventHandler OnDead;
 
+        [SerializeField]
         private float healthMax;
+        [SerializeField]
         private float health;
 
         /// <summary>
