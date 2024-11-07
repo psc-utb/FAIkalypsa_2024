@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using CodeMonkey.HealthSystemCM;
 
 public class BulletCCScript : MonoBehaviour {
 
@@ -21,7 +22,7 @@ public class BulletCCScript : MonoBehaviour {
     [Tooltip("Put Weapon layer and Player layer to ignore bullet raycast.")]
 	public LayerMask ignoreLayer;
 
-    public float zraneni = 1;
+    public float damage = 1;
 
     /*
 	* Uppon bullet creation with this script attatched,
@@ -36,16 +37,24 @@ public class BulletCCScript : MonoBehaviour {
 					Instantiate(decalHitWall, hit.point + hit.normal * floatInfrontOfWall, Quaternion.LookRotation(hit.normal));
 					Destroy(gameObject);
 				}
-				/*if(hit.collider.gameObject.layer == LayerMask.NameToLayer(charactersLayerName))
+			}
+			if (bloodEffect)
+			{
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer(charactersLayerName))
                 {
-					Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                    hit.collider.gameObject.GetComponent<HealthScript>()?.SnizZdravi(zraneni);
+                    Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                    hit.collider.gameObject.GetComponent<HealthSystemComponent>()?.GetHealthSystem().Damage(damage);
                     Destroy(gameObject);
-				}*/
-			}		
+                }
+            }
 			Destroy(gameObject);
 		}
 		Destroy(gameObject, 0.1f);
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 
 }

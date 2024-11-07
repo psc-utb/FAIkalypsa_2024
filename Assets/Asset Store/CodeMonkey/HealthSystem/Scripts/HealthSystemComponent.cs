@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace CodeMonkey.HealthSystemCM {
 
@@ -10,9 +11,16 @@ namespace CodeMonkey.HealthSystemCM {
         [SerializeField]
         private HealthSystem healthSystem;
 
+        public UnityEvent<GameObject> OnDeadUnity;
+
 
         private void Awake() {
-            
+            healthSystem.OnDead += HealthSystem_OnDead;
+        }
+
+        private void HealthSystem_OnDead(object sender, System.EventArgs e)
+        {
+            OnDeadUnity?.Invoke(this.gameObject);
         }
 
         /// <summary>

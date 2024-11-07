@@ -6,10 +6,10 @@ using UnityEngine;
 public class ZombieController : MonoBehaviour
 {
 
-    [Tooltip("zombie speed")]
+    /*[Tooltip("zombie speed")]
     [Range(0, 10)]
     [SerializeField]
-    float speed = 1f;
+    float speed = 1f;*/
 
     Animator _animator;
 
@@ -25,12 +25,12 @@ public class ZombieController : MonoBehaviour
             Input.GetAxisRaw("Vertical") != 0)
         {
 
-            Vector3 movementX = Input.GetAxisRaw("Horizontal") * Vector3.right * speed * Time.deltaTime;
+            /*Vector3 movementX = Input.GetAxisRaw("Horizontal") * Vector3.right * speed * Time.deltaTime;
             Vector3 movementZ = Input.GetAxisRaw("Vertical") * Vector3.forward * speed * Time.deltaTime;
 
             Vector3 movement = movementX + movementZ;
 
-            transform.Translate(movement);
+            transform.Translate(movement);*/
 
             _animator.SetBool("IsMoving", true);
         }
@@ -38,5 +38,10 @@ public class ZombieController : MonoBehaviour
         {
             _animator.SetBool("IsMoving", false);
         }
+    }
+
+    public void Dead(GameObject deadGameObject)
+    {
+        _animator.SetTrigger("Death");
     }
 }

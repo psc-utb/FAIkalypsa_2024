@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SciFi_Warehouse.unity
+    guid: 04ba57353b4f0284686265d3d150c23c
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 190fc5112c5eb4165ab181fad5098aec
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 9a7b2529147874e5db49fb6050dd4abc
   m_configObjects: {}
