@@ -24,7 +24,7 @@ public class HealthSystemDetection : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~LayerMask.GetMask("Player")))
         {
             var healthSysComp = raycastHit.collider.gameObject.GetComponent<HealthSystemComponent>();
-            if (healthSysComp != null && healthBarUI != null)
+            if (healthSysComp != null && healthBarUI != null && healthSysComp.GetHealthSystem().IsDead() == false)
             {
                 var healthBarScript = healthBarUI.GetComponent<HealthBarUI>();
                 healthBarScript.SetHealthSystem(healthSysComp.GetHealthSystem());
