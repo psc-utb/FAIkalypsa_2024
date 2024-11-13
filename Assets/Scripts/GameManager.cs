@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     string playAgainSceneName;
     [SerializeField]
     string deathSceneName;
+    [SerializeField]
+    string victorySceneName;
 
     public void PlayAgain()
     {
@@ -19,5 +21,11 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(deathSceneName);
+    }
+
+    public void VictoryScene()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene(victorySceneName);
     }
 }
