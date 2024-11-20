@@ -140,7 +140,6 @@ public class PlayerMovementCCScript : MonoBehaviour
                 jumpStarted = true;
 
                 previousJumpPosition = characterController.transform.position;
-                GetComponent<HealthSystemComponent>().GetHealthSystem().Damage(10);
             }
         }
 
