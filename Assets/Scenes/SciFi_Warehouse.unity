@@ -50178,6 +50178,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4250294865337329980, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250294865337329980, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250294865337329980, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 591742019882106683}
+    - target: {fileID: 4250294865337329980, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250294865337329980, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Deactivate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250294865337329980, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: NavMeshAgentActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250294865337329980, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5895698127026766484, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
       propertyPath: m_Name
       value: ShirtlessZombie_BodyParts_FREE
@@ -50186,6 +50214,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5895698127026766484, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 591742019882106683}
     - targetCorrespondingSourceObject: {fileID: 5895698127026766484, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
       insertIndex: -1
       addedObject: {fileID: 591742019882106674}
@@ -50235,6 +50266,18 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 1124532541}
   - {fileID: 618169283}
+--- !u!114 &591742019882106683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591742019882106672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fae50ce88465184bbcdd4133b58c064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &689442456843299171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51821,6 +51864,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 4523749340959426650}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Deactivate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: NavMeshAgentActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: m_Name
       value: Ghoul@Animations
@@ -51871,6 +51942,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 4523749340959426650}
+    - targetCorrespondingSourceObject: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4523749340959426641}
     - targetCorrespondingSourceObject: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       insertIndex: -1
@@ -51918,6 +51992,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4523749340959426650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523749340959426640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fae50ce88465184bbcdd4133b58c064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4692395076754921914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53920,10 +54006,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7351274089116020026, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351274089116020026, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351274089116020026, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 6935563455393768055}
+    - target: {fileID: 7351274089116020026, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351274089116020026, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Deactivate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351274089116020026, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: NavMeshAgentActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351274089116020026, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1453678436944593545, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6935563455393768055}
     - targetCorrespondingSourceObject: {fileID: 1453678436944593545, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6935563455393768047}
@@ -53973,6 +54090,18 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 1124532541}
   - {fileID: 618169283}
+--- !u!114 &6935563455393768055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6935563455393768045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fae50ce88465184bbcdd4133b58c064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7156829191557209382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55034,6 +55163,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1801144381518419937, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801144381518419937, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801144381518419937, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 8057302638770982042}
+    - target: {fileID: 1801144381518419937, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801144381518419937, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Deactivate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801144381518419937, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: NavMeshAgentActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801144381518419937, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7556458668621640173, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -55084,6 +55241,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7629748121533767061, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8057302638770982042}
+    - targetCorrespondingSourceObject: {fileID: 7629748121533767061, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 8057302638770982032}
     - targetCorrespondingSourceObject: {fileID: 7629748121533767061, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
       insertIndex: -1
@@ -55131,6 +55291,18 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 1124532541}
   - {fileID: 618169283}
+--- !u!114 &8057302638770982042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8057302638770982030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fae50ce88465184bbcdd4133b58c064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8111711561064184257
 PrefabInstance:
   m_ObjectHideFlags: 0
