@@ -364,9 +364,6 @@ PrefabInstance:
       addedObject: {fileID: 2544945965504204807}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 199745562164824141}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7351274089116020026}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       insertIndex: -1
@@ -427,18 +424,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &199745562164824141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453678436944593545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c6b9ba72efcc224681dc2329efcc28e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7351274089116020026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +442,7 @@ MonoBehaviour:
   OnDeadUnity:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 199745562164824141}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ZombieController, Assembly-CSharp
         m_MethodName: Dead
         m_Mode: 0

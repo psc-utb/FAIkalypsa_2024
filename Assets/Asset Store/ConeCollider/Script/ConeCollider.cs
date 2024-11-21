@@ -10,7 +10,7 @@ public class ConeCollider : MonoBehaviour {
     private float m_angle = 45;
     [SerializeField]
     private float m_distance = 1;
-    public float Distance { get => Distance; }
+    public float Distance { get => m_distance; }
     [SerializeField]
     private bool m_isTrigger;
     private Mesh m_mesh;

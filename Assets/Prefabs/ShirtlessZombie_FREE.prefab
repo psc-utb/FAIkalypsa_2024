@@ -2644,7 +2644,6 @@ GameObject:
   - component: {fileID: 6809157375594656713}
   - component: {fileID: 5543203510496117341}
   - component: {fileID: 7629902907874732043}
-  - component: {fileID: 2958010921991084820}
   - component: {fileID: 1801144381518419937}
   - component: {fileID: 7449186291865267508}
   m_Layer: 8
@@ -2787,18 +2786,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &2958010921991084820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7629748121533767061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c6b9ba72efcc224681dc2329efcc28e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1801144381518419937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2817,7 +2804,7 @@ MonoBehaviour:
   OnDeadUnity:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2958010921991084820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ZombieController, Assembly-CSharp
         m_MethodName: Dead
         m_Mode: 0

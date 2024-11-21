@@ -113,12 +113,12 @@ public class ZombieAI : MonoBehaviour
             
 
 
-            /*bool playerIsDead = false;
+            bool playerIsDead = false;
             if (playerHealthScript != null)
             {
                 playerIsDead = playerHealthScript.GetHealthSystem().IsDead();
             }
-            animator.SetBool("PlayerIsAlive", playerIsDead);*/
+            animator.SetBool("PlayerIsAlive", !playerIsDead);
 
         }
     }
