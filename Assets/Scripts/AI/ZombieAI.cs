@@ -130,4 +130,10 @@ public class ZombieAI : MonoBehaviour
         animator.SetBool("PlayerIsVisible", isVisible);
     }
 
+
+    public void Dead(GameObject deadGameObject)
+    {
+        animator.SetTrigger("Death");
+    }
+
 }
