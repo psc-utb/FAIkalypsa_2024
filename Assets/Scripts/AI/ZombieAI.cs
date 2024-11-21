@@ -98,7 +98,7 @@ public class ZombieAI : MonoBehaviour
 
 
             
-            /*
+
             //simple eyes
             Vector3 position = this.transform.position;
             position.y += 1.5f;
@@ -111,8 +111,7 @@ public class ZombieAI : MonoBehaviour
                 animator.SetBool("PlayerIsVisible", true);
             }
             Debug.DrawRay(position, transform.TransformDirection(Vector3.forward) * rayCastHit.distance, Color.yellow);
-            */
-
+            
 
 
             bool playerIsDead = false;
