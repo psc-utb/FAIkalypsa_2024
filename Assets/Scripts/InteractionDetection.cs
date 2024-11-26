@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class InteractionDetection : MonoBehaviour
 {
     [SerializeField]
-    float maxDistanceDetection = 0.5f;
+    float maxDistanceDetection = 1f;
 
     public UnityEvent<GameObject> objectDetected;
 
@@ -28,11 +28,9 @@ public class InteractionDetection : MonoBehaviour
             if (interaction != null)
             {
                 objectDetected?.Invoke(raycastHit.collider.gameObject);
-            }
-            else
-            {
-                objectDetected?.Invoke(null);
+                return;
             }
         }
+        objectDetected?.Invoke(null);
     }
 }

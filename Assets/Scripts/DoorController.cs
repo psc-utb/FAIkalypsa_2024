@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Animator))]
 public class DoorController : MonoBehaviour, IClosable
 {
+    [SerializeField]
+    GameObject doorToInteract;
+
     Animator _animator;
 
     [SerializeField]
@@ -17,7 +19,7 @@ public class DoorController : MonoBehaviour, IClosable
     // Start is called before the first frame update
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        _animator = doorToInteract.GetComponent<Animator>();
     }
 
     public void Close()
