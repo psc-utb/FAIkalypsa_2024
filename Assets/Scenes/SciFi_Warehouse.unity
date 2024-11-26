@@ -54876,7 +54876,7 @@ MonoBehaviour:
   player: {fileID: 328556966}
   Hands: {fileID: 1637098220}
   speedIdle: 0
-  speedWalk: 0.3
+  speedWalk: 0.7
   speedRun: 3.5
 --- !u!1001 &7156829191557209382
 PrefabInstance:
@@ -56117,7 +56117,7 @@ MonoBehaviour:
   player: {fileID: 328556966}
   Hands: {fileID: 1709385514}
   speedIdle: 0
-  speedWalk: 0.7
+  speedWalk: 0.8
   speedRun: 3
 --- !u!1001 &8111711561064184257
 PrefabInstance:
