@@ -48136,7 +48136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f376df8945434399de9ba08591889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceDetection: 3
+  maxDistanceDetection: 2.5
   objectDetected:
     m_PersistentCalls:
       m_Calls:
