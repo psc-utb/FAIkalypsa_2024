@@ -48136,7 +48136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f376df8945434399de9ba08591889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceDetection: 2
+  maxDistanceDetection: 3
   objectDetected:
     m_PersistentCalls:
       m_Calls:
@@ -54107,18 +54107,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1933807477239654733, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
-      propertyPath: m_Name
-      value: Bay Door Frame
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933807477239654733, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933807477239654733, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2647211758135124163, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_Name
       value: Bay Door Wall
@@ -54142,6 +54130,30 @@ PrefabInstance:
     - target: {fileID: 2702167651921923441, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366451464691070183, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366451464691070183, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: m_Size.y
+      value: 4.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366451464691070183, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: m_Size.z
+      value: 4.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366451464691070183, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366451464691070183, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: m_Center.y
+      value: 2.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366451464691070183, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: m_Center.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4975399993979019661, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_Name

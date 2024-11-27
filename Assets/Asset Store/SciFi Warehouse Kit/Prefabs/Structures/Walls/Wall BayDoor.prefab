@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5195786218426222332}
   - component: {fileID: 7133350039895356201}
   - component: {fileID: 3366451464691070183}
-  m_Layer: 0
-  m_Name: LP_Bay_Door_Frame_snaps
+  m_Layer: 11
+  m_Name: Bay Door Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

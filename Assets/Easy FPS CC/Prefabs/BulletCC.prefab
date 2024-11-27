@@ -126,5 +126,5 @@ MonoBehaviour:
   charactersLayerName: Character
   ignoreLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2112
   damage: 10
