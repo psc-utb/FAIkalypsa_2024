@@ -15,18 +15,19 @@ public class InteractionAction : MonoBehaviour
 
     }
 
-    public void PerformAction(GameObject objToInteract)
-    {
-        var interactableObject = objToInteract.GetComponent<IInteractable>();
-        interactableObject.Interact();
-    }
-
-    public void ShowHideInteractionInfo(GameObject objToInteract)
+    public void PerformAction(IInteractable objToInteract)
     {
         if (objToInteract != null)
         {
-            var interactableObject = objToInteract.GetComponent<IInteractable>();
-            interactableObject.ShowInteraction();
+            objToInteract.Interact();
+        }
+    }
+
+    public void ShowInteractionInfo(IInteractable objToInteract)
+    {
+        if (objToInteract != null)
+        {
+            objToInteract.ShowInteraction();
         }
     }
 }

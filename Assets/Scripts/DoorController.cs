@@ -27,16 +27,34 @@ public class DoorController : MonoBehaviour, IClosable
         _animator.SetTrigger("Close");
     }
 
+    /*public void Open()
+    {
+        _animator.SetTrigger("Open");
+    }*/
+
     public void Interact()
     {
         if (opened)
         {
             Close();
+            opened = false;
         }
+        /*else
+        {
+            Open();
+            opened = true;
+        }*/
     }
 
     public void ShowInteraction()
     {
-        InteractionInfoRequested?.Invoke("Press E to close");
+        if (opened)
+        {
+            InteractionInfoRequested?.Invoke("Press E to close");
+        }
+        /*else
+        {
+            InteractionInfoRequested?.Invoke("Press E to open");
+        }*/
     }
 }

@@ -33,19 +33,11 @@ public class InteractionDisplay : MonoBehaviour
         //interactionText.enabled = false;
     }
 
-    public void Deactivate(GameObject objToInteract)
+    public void Deactivate(IInteractable objToInteract)
     {
         if (objToInteract == null)
         {
             Deactivate();
-        }
-        else
-        {
-            var interactableObject = objToInteract.GetComponent<IInteractable>();
-            if (interactableObject == null)
-            {
-                Deactivate();
-            }
         }
     }
 }

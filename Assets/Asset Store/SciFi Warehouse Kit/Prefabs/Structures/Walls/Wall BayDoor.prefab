@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5195786218426222332}
   - component: {fileID: 7133350039895356201}
   - component: {fileID: 3366451464691070183}
+  - component: {fileID: 3592370489233783465}
   m_Layer: 11
   m_Name: Bay Door Frame
   m_TagString: Untagged
@@ -103,8 +104,37 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.39776614, y: 4.619362, z: 4.276044}
-  m_Center: {x: -0.0006676169, y: 2.311079, z: 2.9999979}
+  m_Size: {x: 0.4, y: 4.62, z: 4.28}
+  m_Center: {x: 0, y: 2.31, z: 3}
+--- !u!114 &3592370489233783465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933807477239654733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823cbfc74fe1bf14395d70ed0ac663e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorToInteract: {fileID: 4975399993979019661}
+  opened: 1
+  InteractionInfoRequested:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InteractionDisplay, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2647211758135124163
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,8 +150,8 @@ GameObject:
   - component: {fileID: 8628764266457687011}
   - component: {fileID: 4916995761172275742}
   - component: {fileID: 3865138643447205080}
-  m_Layer: 0
-  m_Name: LP_Bay_Door_Wall_snaps
+  m_Layer: 7
+  m_Name: Bay Door Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,7 +260,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.03, y: 0.87, z: 0.19}
   m_Center: {x: 0.31, y: 1.41, z: 5.28}
@@ -251,7 +281,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.03, y: 0.87, z: 0.19}
   m_Center: {x: 0.31, y: 1.41, z: 0.7}
@@ -286,7 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1430841697005043554}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall BayDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,8 +354,8 @@ GameObject:
   - component: {fileID: 9041195004258538045}
   - component: {fileID: 5465362276048886838}
   - component: {fileID: 2320438271290407908}
-  m_Layer: 0
-  m_Name: LP_Bay_Door_snaps
+  m_Layer: 7
+  m_Name: Bay Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,8 +445,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2517902, y: 5.7053785, z: 4.908103}
-  m_Center: {x: 0.18666767, y: 2.350721, z: 3.0000768}
+  m_Size: {x: 0.4321859, y: 5.7053785, z: 4.908103}
+  m_Center: {x: -0.22313452, y: 2.350721, z: 3.0000768}
 --- !u!95 &2320438271290407908
 Animator:
   serializedVersion: 5
