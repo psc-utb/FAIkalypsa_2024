@@ -1,12 +1,15 @@
 using CodeMonkey.HealthSystemCM;
 using Ghoul.AI;
+using SOLID_Object_Pool;
+using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(NavMeshAgent))]
-public class ZombieAI : MonoBehaviour
+public class ZombieAI : MonoBehaviour, IDespawnable<GameObject>, IReinitializable
 {
 
     Animator animator;
@@ -38,6 +41,16 @@ public class ZombieAI : MonoBehaviour
     public float SpeedRun { get => speedRun; set => speedRun = value; }
 
 
+
+    CapsuleCollider capsule;
+
+    float capsuleHeight;
+    Vector3 capsuleCenter;
+
+
+    public event Action<GameObject, bool> Despawn;
+
+
     void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -46,6 +59,11 @@ public class ZombieAI : MonoBehaviour
         navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
 
         playerHealthScript = player.GetComponent<HealthSystemComponent>();
+
+
+        capsule = gameObject.GetComponent<CapsuleCollider>();
+        capsuleHeight = capsule.height;
+        capsuleCenter = capsule.center;
     }
 
     void Start()
@@ -134,6 +152,34 @@ public class ZombieAI : MonoBehaviour
     public void Dead(GameObject deadGameObject)
     {
         animator.SetTrigger("Death");
+
+        Despawn?.Invoke(this.gameObject, true);
     }
 
+
+    public void Reinitializate()
+    {
+        healthScript.GetHealthSystem().SetHealth(healthScript.GetHealthSystem().GetHealthMax());
+
+        capsule.height = capsuleHeight;
+        capsule.center = capsuleCenter;
+
+        navMeshAgent.baseOffset = 0;
+        navMeshAgent.enabled = true;
+
+        //just to remove warning in Unity editor about animator setting while gameobject is inactive
+        gameObject.SetActive(true);
+
+        GhoulBehaviorInit();
+
+        //animator.Rebind();
+        //animator.Update(0f);
+        animator.ResetTrigger("Death");
+        animator.SetBool("PlayerIsVisible", false);
+        animator.SetFloat("PlayerDistance", float.PositiveInfinity);
+        animator.SetBool("PlayerIsAlive", !playerHealthScript.GetHealthSystem().IsDead());
+        animator.Play("Idle", 0, 0);
+
+
+    }
 }
