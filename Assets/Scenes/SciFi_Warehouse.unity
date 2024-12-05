@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 105366104}
   - component: {fileID: 105366106}
   - component: {fileID: 105366105}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6788,7 +6788,7 @@ GameObject:
   - component: {fileID: 324464996}
   - component: {fileID: 324464998}
   - component: {fileID: 324464997}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28935,7 +28935,7 @@ GameObject:
   - component: {fileID: 1091062928}
   - component: {fileID: 1091062929}
   - component: {fileID: 1091062930}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34470,7 +34470,7 @@ GameObject:
   - component: {fileID: 1332325878}
   - component: {fileID: 1332325880}
   - component: {fileID: 1332325879}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35369,7 +35369,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16311
+    m_Bits: 32695
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -35390,7 +35390,7 @@ BoxCollider:
     m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16311
+    m_Bits: 32695
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -39290,7 +39290,7 @@ GameObject:
   - component: {fileID: 1573255983}
   - component: {fileID: 1573255982}
   - component: {fileID: 1573255981}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40036,7 +40036,7 @@ GameObject:
   - component: {fileID: 1637098221}
   - component: {fileID: 1637098223}
   - component: {fileID: 1637098222}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42325,7 +42325,7 @@ GameObject:
   - component: {fileID: 1709385517}
   - component: {fileID: 1709385516}
   - component: {fileID: 1709385515}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44232,7 +44232,7 @@ GameObject:
   - component: {fileID: 1815133717}
   - component: {fileID: 1815133719}
   - component: {fileID: 1815133718}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56567,6 +56567,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShirtlessZombie_BodyParts_FREE
       objectReference: {fileID: 0}
+    - target: {fileID: 8274410740146518286, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: colliderHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274410740146518286, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
+      propertyPath: colliderRadius
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -56610,7 +56618,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 591742019882106672}
   m_Enabled: 1
   m_AgentTypeID: -1372625422
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -56619,7 +56627,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.8
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -60707,6 +60715,10 @@ PrefabInstance:
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7776570296836665851, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -60750,7 +60762,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 6935563455393768045}
   m_Enabled: 1
   m_AgentTypeID: -1372625422
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -60759,7 +60771,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.8
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -62036,6 +62048,18 @@ PrefabInstance:
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3769244975879672168, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543203510496117341, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449186291865267508, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
+      propertyPath: colliderRadius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7556458668621640173, guid: 4f83a94bcde21a048bc1c1cee87e79b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -62123,7 +62147,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8057302638770982030}
   m_Enabled: 1
   m_AgentTypeID: -1372625422
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -62132,7 +62156,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.8
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

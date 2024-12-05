@@ -18,7 +18,6 @@ public class NavMeshAgentActivator : MonoBehaviour
 
     public void Deactivate()
     {
-        navMeshAgent.baseOffset = -2;
         navMeshAgent.ResetPath();
         navMeshAgent.speed = 0;
         navMeshAgent.enabled = false;
