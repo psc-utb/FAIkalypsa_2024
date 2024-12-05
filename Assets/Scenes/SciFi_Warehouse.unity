@@ -56569,11 +56569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8274410740146518286, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
       propertyPath: colliderHeight
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8274410740146518286, guid: 78215f1d8b07da648add70d3bb016414, type: 3}
       propertyPath: colliderRadius
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
