@@ -11,6 +11,9 @@ public class HealthSystemDetection : MonoBehaviour
     [SerializeField]
     GameObject healthBarUI;
 
+    [SerializeField]
+    LayerMask ignoreLayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,7 @@ public class HealthSystemDetection : MonoBehaviour
     void Update()
     {
         RaycastHit raycastHit;
-        if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~(LayerMask.GetMask("Player") | LayerMask.GetMask("CharacterParts"))))
+        if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~ignoreLayer))
         {
             var healthSysComp = raycastHit.collider.gameObject.GetComponent<HealthSystemComponent>();
             if (healthSysComp != null && healthBarUI != null && healthSysComp.GetHealthSystem().IsDead() == false)

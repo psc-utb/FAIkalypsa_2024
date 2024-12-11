@@ -13,6 +13,9 @@ public class InteractionDetection : MonoBehaviour
     public UnityEvent<IInteractable> objectDetected;
     public UnityEvent<IInteractable> objectInteracted;
 
+    [SerializeField]
+    LayerMask ignoreLayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +37,7 @@ public class InteractionDetection : MonoBehaviour
     public IInteractable DetectInteraction()
     {
         RaycastHit raycastHit;
-        if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~LayerMask.GetMask("Player")))
+        if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~ignoreLayer))
         {
             var interaction = raycastHit.collider.gameObject.GetComponent<IInteractable>();
             if (interaction != null)

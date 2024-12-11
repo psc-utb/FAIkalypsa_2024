@@ -53485,6 +53485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistanceDetection: 20
   healthBarUI: {fileID: 429157796}
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 26720
 --- !u!114 &1994486364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53564,6 +53567,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 8256
 --- !u!114 &1994486366
 MonoBehaviour:
   m_ObjectHideFlags: 0
