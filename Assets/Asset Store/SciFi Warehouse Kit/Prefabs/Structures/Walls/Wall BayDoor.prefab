@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InteractionDisplay, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Activate
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -135,6 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  inputActionAsset: {fileID: -944628639613478452, guid: 8fd7f5c636620a144a121c7fa3761964, type: 3}
 --- !u!1 &2647211758135124163
 GameObject:
   m_ObjectHideFlags: 0

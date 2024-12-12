@@ -9829,7 +9829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467851962
@@ -59854,13 +59854,17 @@ PrefabInstance:
       value: Bay Door Wall
       objectReference: {fileID: 0}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: inputAction
+      value: 
+      objectReference: {fileID: 5205638093300851420, guid: 8fd7f5c636620a144a121c7fa3761964, type: 3}
+    - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: inputAction.m_Name
+      value: Input
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 467851964}
-    - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
-      propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Activate
-      objectReference: {fileID: 0}
     - target: {fileID: 6935417351677981081, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 5

@@ -1,8 +1,10 @@
 using Assets.Scripts.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class DoorController : MonoBehaviour, IClosable
 {
@@ -15,6 +17,9 @@ public class DoorController : MonoBehaviour, IClosable
     bool opened = true;
 
     public UnityEvent<string> InteractionInfoRequested;
+
+    [SerializeField]
+    InputActionAsset inputActionAsset; 
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +55,13 @@ public class DoorController : MonoBehaviour, IClosable
     {
         if (opened)
         {
-            InteractionInfoRequested?.Invoke("Press E to close");
+            var bindingKey = inputActionAsset
+                            .actionMaps
+                            .FirstOrDefault(inputActionMap => inputActionMap.name == "Player")
+                            .actions
+                            .FirstOrDefault(action => action.name == "Interaction")
+                            .GetBindingDisplayString();
+            InteractionInfoRequested?.Invoke($"Press {bindingKey} to close");
         }
         /*else
         {
