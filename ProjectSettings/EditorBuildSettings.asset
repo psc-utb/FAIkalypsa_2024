@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: cd8ebcd9ed0b29143a8d054ed019951f
+  - enabled: 1
     path: Assets/Scenes/SciFi_Warehouse.unity
     guid: 04ba57353b4f0284686265d3d150c23c
   - enabled: 1

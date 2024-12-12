@@ -4575,19 +4575,95 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 71674704379818091, guid: 455bdaa9486f4b3468a1ba90016c43df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 226260324}
+    - targetCorrespondingSourceObject: {fileID: 71674704379818091, guid: 455bdaa9486f4b3468a1ba90016c43df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 226260326}
   m_SourcePrefab: {fileID: 100100000, guid: 455bdaa9486f4b3468a1ba90016c43df, type: 3}
 --- !u!114 &226260322 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4729022337907384181, guid: 455bdaa9486f4b3468a1ba90016c43df, type: 3}
   m_PrefabInstance: {fileID: 226260321}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 226260323}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 112f5d9468aaed74c90c61ecd7525078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &226260323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 71674704379818091, guid: 455bdaa9486f4b3468a1ba90016c43df, type: 3}
+  m_PrefabInstance: {fileID: 226260321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &226260324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226260323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f3eb411a4498947bb19ee56b5ef9bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuSceneName: Menu
+  EventSystem: {fileID: 254196410}
+  inputActionAsset: {fileID: -944628639613478452, guid: 8fd7f5c636620a144a121c7fa3761964, type: 3}
+--- !u!114 &226260326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226260323}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 8fd7f5c636620a144a121c7fa3761964, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 78a18cf9-a206-4e24-b330-abd9b5e9e257
+    m_ActionName: Player/Interaction[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 226260324}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: ShowHideMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 278b0a57-9341-4233-9df0-7f267be19783
+    m_ActionName: UI/Menu[/Keyboard/escape]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: UI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &227456830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53611,6 +53687,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 78a18cf9-a206-4e24-b330-abd9b5e9e257
     m_ActionName: Player/Interaction[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 278b0a57-9341-4233-9df0-7f267be19783
+    m_ActionName: UI/Menu[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
