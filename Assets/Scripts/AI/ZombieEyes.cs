@@ -30,7 +30,7 @@ public class ZombieEyes : MonoBehaviour
 
             Ray ray = new Ray(position, direction);
             RaycastHit rayCastHit = new RaycastHit();
-            Physics.Raycast(ray, out rayCastHit, coneCollider.Distance, ~(LayerMask.GetMask("Character") | LayerMask.GetMask("CharacterParts") | LayerMask.GetMask("Spawner") | LayerMask.GetMask("Door")));
+            Physics.Raycast(ray, out rayCastHit, coneCollider.Distance, ~(LayerMask.GetMask("Character") | LayerMask.GetMask("CharacterParts") | LayerMask.GetMask("Spawner") | LayerMask.GetMask("Interactive")));
             //Physics.SphereCast(ray, 1f, out rayCastHit, coneCollider.Distance)
 
             if (rayCastHit.collider != null && rayCastHit.collider.gameObject == Player)
