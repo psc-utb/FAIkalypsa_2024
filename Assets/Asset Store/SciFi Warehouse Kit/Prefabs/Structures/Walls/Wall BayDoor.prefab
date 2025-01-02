@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InteractionDisplay, Assembly-CSharp
-        m_MethodName: Activate
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 9041195004258538045}
   - component: {fileID: 5465362276048886838}
   - component: {fileID: 2320438271290407908}
+  - component: {fileID: 810815357792093018}
   m_Layer: 7
   m_Name: Bay Door
   m_TagString: Untagged
@@ -469,3 +470,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!208 &810815357792093018
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975399993979019661}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.62600005, y: 2.8530002, z: 2.4540002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.187, y: 2.351, z: 3.0000002}
+  m_TimeToStationary: 0.5
