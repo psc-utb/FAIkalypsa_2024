@@ -1,31 +1,21 @@
 using Assets.Scripts.Interfaces;
-using CodeMonkey.HealthSystemCM;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InteractionDetection : MonoBehaviour
+public class InteractionDetector : MonoBehaviour, IInteractionDetector
 {
     [SerializeField]
     float maxDistanceDetection = 1f;
 
     public UnityEvent<IInteractable> objectDetected;
-    public UnityEvent<IInteractable> objectInteracted;
 
     [SerializeField]
     LayerMask ignoreLayer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        var objectToInteract = DetectInteraction();
+        var objectToInteract = Detect();
         if (objectToInteract != null)
         {
             objectDetected?.Invoke(objectToInteract);
@@ -34,7 +24,7 @@ public class InteractionDetection : MonoBehaviour
         objectDetected?.Invoke(null);
     }
 
-    public IInteractable DetectInteraction()
+    public IInteractable Detect()
     {
         RaycastHit raycastHit;
         if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~ignoreLayer))
@@ -46,15 +36,5 @@ public class InteractionDetection : MonoBehaviour
             }
         }
         return null;
-    }
-
-    public void InvokeInteraction()
-    {
-        var objectToInteract = DetectInteraction();
-        if (objectToInteract != null)
-        {
-            objectInteracted?.Invoke(objectToInteract);
-            return;
-        }
     }
 }

@@ -15,12 +15,6 @@ public class InteractionDisplay : MonoBehaviour
         interactionText = GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Activate(string text)
     {
         interactionText.text = text;
