@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DoorController" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="2.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAAAAAAAAYAABABAAIAAAAACBAAA=</HashCode>
+      <FileName>Assets\Scripts\DoorController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="InteractionAction">
+    <Position X="13" Y="3.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\InteractionAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InteractionDisplay">
+    <Position X="13" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\InteractionDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InteractionActivator">
+    <Position X="9.5" Y="3.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAABAAQAAAAAAAAAAAAIAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\InteractionActivator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="InteractionInfoActivator">
+    <Position X="9.5" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\InteractionInfoActivator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_detector" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Detector">
+    <Position X="6.25" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAIAAAAAAgAAAAAAAACAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Detector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="InteractionSystem.Interfaces.IClosable">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Interfaces\IClosable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InteractionSystem.Interfaces.IInteractable">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInteractable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InteractionSystem.Interfaces.IInteractionActivator">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInteractionActivator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InteractionSystem.Interfaces.IInformable">
+    <Position X="0.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInformable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InteractionSystem.Interfaces.IDetector">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Interfaces\IDetector.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

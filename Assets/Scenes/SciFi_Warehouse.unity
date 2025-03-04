@@ -53539,8 +53539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f376df8945434399de9ba08591889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceDetection: 2.5
-  objectDetected:
+  interactionDetector: {fileID: 1994486377}
+  objectWithInfoDetected:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1994486364}
@@ -53567,12 +53567,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectInteracted:
-    m_PersistentCalls:
-      m_Calls: []
-  ignoreLayer:
-    serializedVersion: 2
-    m_Bits: 8256
 --- !u!114 &1994486366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53635,6 +53629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2106f39b056c5c478963d09fa5de3f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionDetector: {fileID: 1994486377}
   objectInteracted:
     m_PersistentCalls:
       m_Calls:
@@ -53653,7 +53648,7 @@ MonoBehaviour:
       - m_Target: {fileID: 467851964}
         m_TargetAssemblyTypeName: InteractionDisplay, Assembly-CSharp
         m_MethodName: Deactivate
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -53662,7 +53657,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  interactionDetector: {fileID: 1994486365}
+--- !u!114 &1994486377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994486354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e418e94f33372f74085c768f62f646f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistanceDetection: 2.5
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 8256
 --- !u!1001 &2011562366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55074,6 +55084,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3888737293353507102, guid: bd66f679e7ce781409c4cf65ec5085e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1994486359}
+    - targetCorrespondingSourceObject: {fileID: 3888737293353507102, guid: bd66f679e7ce781409c4cf65ec5085e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1994486377}
     - targetCorrespondingSourceObject: {fileID: 3888737293353507102, guid: bd66f679e7ce781409c4cf65ec5085e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1994486365}

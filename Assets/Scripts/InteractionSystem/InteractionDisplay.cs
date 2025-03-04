@@ -1,6 +1,4 @@
-using Assets.Scripts.Interfaces;
-using System.Collections;
-using System.Collections.Generic;
+using InteractionSystem.Interfaces;
 using TMPro;
 using UnityEngine;
 
@@ -27,7 +25,7 @@ public class InteractionDisplay : MonoBehaviour
         //interactionText.enabled = false;
     }
 
-    public void Deactivate(IInteractable objToInteract)
+    public void Deactivate(IInformable objToInteract)
     {
         if (objToInteract == null)
         {

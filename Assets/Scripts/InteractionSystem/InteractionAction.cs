@@ -1,4 +1,4 @@
-using Assets.Scripts.Interfaces;
+using InteractionSystem.Interfaces;
 using UnityEngine;
 
 public class InteractionAction : MonoBehaviour
@@ -11,11 +11,11 @@ public class InteractionAction : MonoBehaviour
         }
     }
 
-    public void ShowInteractionInfo(IInteractable objToInteract)
+    public void ShowInteractionInfo(IInformable objWithInformation)
     {
-        if (objToInteract != null)
+        if (objWithInformation != null)
         {
-            objToInteract.ShowInteraction();
+            objWithInformation.Inform();
         }
     }
 }

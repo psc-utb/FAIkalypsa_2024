@@ -1,9 +1,8 @@
 ﻿
-namespace Assets.Scripts.Interfaces
+namespace InteractionSystem.Interfaces
 {
     public interface IInteractable
     {
         void Interact();
-        void ShowInteraction();
     }
 }

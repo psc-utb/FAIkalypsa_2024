@@ -1,4 +1,4 @@
-using Assets.Scripts.Interfaces;
+using InteractionSystem.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class DoorController : MonoBehaviour, IClosable
+public class DoorController : MonoBehaviour, IInteractable, IInformable, IClosable
 {
     [SerializeField]
     GameObject doorToInteract;
@@ -51,7 +51,7 @@ public class DoorController : MonoBehaviour, IClosable
         }*/
     }
 
-    public void ShowInteraction()
+    public void Inform()
     {
         if (opened)
         {

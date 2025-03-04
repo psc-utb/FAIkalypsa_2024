@@ -1,6 +1,5 @@
-﻿using System;
-
-namespace Assets.Scripts.Interfaces
+﻿
+namespace InteractionSystem.Interfaces
 {
     public interface IInteractionActivator
     {
