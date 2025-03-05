@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DoorController : MonoBehaviour, IInteractable, IInformable<string>
+public class DoorInteraction : MonoBehaviour, IInteractable, IInformable<string>
 {
     [SerializeField]
     GameObject doorToInteract;
