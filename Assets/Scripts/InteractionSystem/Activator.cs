@@ -12,7 +12,7 @@ public abstract class Activator<T> : MonoBehaviour, IActivator
         _detector = interactionDetector.GetComponent<IDetector>();
     }
 
-    public void Activate()
+    public bool Activate()
     {
         if (_detector != null)
         {
@@ -20,9 +20,10 @@ public abstract class Activator<T> : MonoBehaviour, IActivator
             if (objectDetected != null)
             {
                 Activation(objectDetected);
-                return;
+                return true;
             }
         }
+        return false;
     }
 
     protected abstract void Activation(T obj);

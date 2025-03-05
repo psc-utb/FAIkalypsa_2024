@@ -1,8 +1,8 @@
 ﻿
 namespace InteractionSystem.Interfaces
 {
-    public interface IInformable
+    public interface IInformable<T>
     {
-        void Inform();
+        T Inform();
     }
 }

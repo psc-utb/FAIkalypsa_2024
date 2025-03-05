@@ -53595,7 +53595,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1994486371}
-        m_TargetAssemblyTypeName: Assets.Scripts.InteractionActivator, Assembly-CSharp
+        m_TargetAssemblyTypeName: InteractionActivator, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
         m_Arguments:

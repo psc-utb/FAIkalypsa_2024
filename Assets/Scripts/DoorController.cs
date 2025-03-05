@@ -1,12 +1,10 @@
 using InteractionSystem.Interfaces;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class DoorController : MonoBehaviour, IInteractable, IInformable, IClosable
+public class DoorController : MonoBehaviour, IInteractable, IInformable<string>, IClosable
 {
     [SerializeField]
     GameObject doorToInteract;
@@ -52,8 +50,9 @@ public class DoorController : MonoBehaviour, IInteractable, IInformable, IClosab
         }*/
     }
 
-    public void Inform()
+    public string Inform()
     {
+        string textWithInformation = string.Empty;
         if (opened)
         {
             var bindingKey = inputActionAsset
@@ -62,11 +61,14 @@ public class DoorController : MonoBehaviour, IInteractable, IInformable, IClosab
                             .actions
                             .FirstOrDefault(action => action.name == "Interaction")
                             .GetBindingDisplayString();
-            InteractionInfoRequested?.Invoke($"Press {bindingKey} to close");
+            textWithInformation = $"Press {bindingKey} to close";
+            InteractionInfoRequested?.Invoke(textWithInformation);
         }
         /*else
         {
             InteractionInfoRequested?.Invoke("Press E to open");
         }*/
+
+        return textWithInformation;
     }
 }

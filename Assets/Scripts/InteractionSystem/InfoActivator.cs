@@ -2,37 +2,25 @@ using InteractionSystem.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InfoActivator : MonoBehaviour, IActivator
+public class InfoActivator : Activator<IInformable<string>>
 {
     [SerializeField]
-    Component interactionDetector;
-    IDetector _detector;
+    protected UnityEvent<IInformable<string>> objectWithInfoDetected;
 
-    [SerializeField]
-    protected UnityEvent<IInformable> objectWithInfoDetected;
-
-    protected void Awake()
+    protected new void Awake()
     {
-        _detector = interactionDetector.GetComponent<IDetector>();
+        base.Awake();
     }
 
     // Update is called once per frame
     protected void Update()
     {
-        Activate();
+        if (Activate() == false)
+            objectWithInfoDetected?.Invoke(null);
     }
 
-    public void Activate()
+    protected override void Activation(IInformable<string> obj)
     {
-        if (_detector != null)
-        {
-            var objectWithInformation = _detector.Detect<IInformable>();
-            if (objectWithInformation != null)
-            {
-                objectWithInfoDetected?.Invoke(objectWithInformation);
-                return;
-            }
-        }
-        objectWithInfoDetected?.Invoke(null);
+        objectWithInfoDetected?.Invoke(obj);
     }
 }

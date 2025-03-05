@@ -25,7 +25,7 @@ public class InteractionDisplay : MonoBehaviour
         //interactionText.enabled = false;
     }
 
-    public void Deactivate(IInformable objToInteract)
+    public void Deactivate(IInformable<string> objToInteract)
     {
         if (objToInteract == null)
         {

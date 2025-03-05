@@ -3,15 +3,7 @@ using UnityEngine;
 
 public class InteractionAction : MonoBehaviour
 {
-    public void PerformAction(IInteractable objToInteract)
-    {
-        if (objToInteract != null)
-        {
-            objToInteract.Interact();
-        }
-    }
-
-    public void ShowInteractionInfo(IInformable objWithInformation)
+    public void ShowInteractionInfo(IInformable<string> objWithInformation)
     {
         if (objWithInformation != null)
         {

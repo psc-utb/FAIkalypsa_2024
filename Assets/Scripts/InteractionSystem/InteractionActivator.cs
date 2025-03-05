@@ -10,17 +10,16 @@ public class InteractionActivator : Activator<IInteractable>
     protected new void Awake()
     {
         base.Awake();
-        //objectActivated.AddListener(Interaction);
     }
-
-    /*public void Interaction(IInteractable objectToInteract)
-    {
-        objectToInteract.Interact();
-    }*/
 
     protected override void Activation(IInteractable obj)
     {
         obj.Interact();
         objectActivated?.Invoke(obj);
+    }
+
+    public new void Activate()
+    {
+        bool activated = base.Activate();
     }
 }
