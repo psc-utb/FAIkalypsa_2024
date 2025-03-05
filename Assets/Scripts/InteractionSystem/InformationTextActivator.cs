@@ -2,7 +2,7 @@ using InteractionSystem.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InfoActivator : Activator<IInformable<string>>
+public class InformationTextActivator : Activator<IInformable<string>>
 {
     [SerializeField]
     protected UnityEvent<IInformable<string>> objectActivated;

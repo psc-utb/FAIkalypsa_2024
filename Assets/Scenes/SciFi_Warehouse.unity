@@ -53515,18 +53515,6 @@ MonoBehaviour:
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 26720
---- !u!114 &1994486364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994486354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa983d068584c14e846f39b10a97a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1994486365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55066,9 +55054,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3888737293353507102, guid: bd66f679e7ce781409c4cf65ec5085e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1994486365}
-    - targetCorrespondingSourceObject: {fileID: 3888737293353507102, guid: bd66f679e7ce781409c4cf65ec5085e9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1994486364}
     - targetCorrespondingSourceObject: {fileID: 3888737293353507102, guid: bd66f679e7ce781409c4cf65ec5085e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1994486371}
