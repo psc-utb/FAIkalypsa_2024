@@ -16,7 +16,8 @@ public class DoorController : MonoBehaviour, IInteractable, IInformable, IClosab
     [SerializeField]
     bool opened = true;
 
-    public UnityEvent<string> InteractionInfoRequested;
+    [SerializeField]
+    UnityEvent<string> InteractionInfoRequested;
 
     [SerializeField]
     InputActionAsset inputActionAsset; 
