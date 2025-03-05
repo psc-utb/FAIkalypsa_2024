@@ -2,7 +2,7 @@ using InteractionSystem.Interfaces;
 using UnityEngine;
 //using UnityEngine.Events;
 
-public class InformationTextActivator : Activator<IInformable<string>>
+public class InformationTextActivator : Activator<IInformable<string>>, IDeactivator
 {
     [SerializeField]
     Component displayable;
@@ -27,7 +27,7 @@ public class InformationTextActivator : Activator<IInformable<string>>
     {
         if (Activate() == false)
         {
-            _hideable.Hide();
+            Deactivate();
             //objectActivated?.Invoke(null);
         }
     }
@@ -36,5 +36,10 @@ public class InformationTextActivator : Activator<IInformable<string>>
     {
         _displayable.Display(obj.Inform());
         //objectActivated?.Invoke(obj);
+    }
+
+    public void Deactivate()
+    {
+        _hideable.Hide();
     }
 }
