@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class DoorController : MonoBehaviour, IInteractable, IInformable<string>, IClosable
+public class DoorController : MonoBehaviour, IInteractable, IInformable<string>
 {
     [SerializeField]
     GameObject doorToInteract;
