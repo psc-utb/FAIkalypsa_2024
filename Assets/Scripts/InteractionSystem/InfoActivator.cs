@@ -2,7 +2,7 @@ using InteractionSystem.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InteractionInfoActivator : MonoBehaviour
+public class InfoActivator : MonoBehaviour, IActivator
 {
     [SerializeField]
     Component interactionDetector;
@@ -11,13 +11,18 @@ public class InteractionInfoActivator : MonoBehaviour
     [SerializeField]
     protected UnityEvent<IInformable> objectWithInfoDetected;
 
-    void Awake()
+    protected void Awake()
     {
         _detector = interactionDetector.GetComponent<IDetector>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
+    {
+        Activate();
+    }
+
+    public void Activate()
     {
         if (_detector != null)
         {

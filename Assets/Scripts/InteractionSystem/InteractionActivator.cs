@@ -2,27 +2,25 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InteractionActivator : MonoBehaviour, IInteractionActivator
+public class InteractionActivator : Activator<IInteractable>
 {
     [SerializeField]
-    Component interactionDetector;
-    IDetector _detector;
+    protected UnityEvent<IInteractable> objectActivated;
 
-    [SerializeField]
-    protected UnityEvent<IInteractable> objectInteracted;
-
-    void Awake()
+    protected new void Awake()
     {
-        _detector = interactionDetector.GetComponent<IDetector>();
+        base.Awake();
+        //objectActivated.AddListener(Interaction);
     }
 
-    public void Activate()
+    /*public void Interaction(IInteractable objectToInteract)
     {
-        var objectToInteract = _detector.Detect<IInteractable>();
-        if (objectToInteract != null)
-        {
-            objectInteracted?.Invoke(objectToInteract);
-            return;
-        }
+        objectToInteract.Interact();
+    }*/
+
+    protected override void Activation(IInteractable obj)
+    {
+        obj.Interact();
+        objectActivated?.Invoke(obj);
     }
 }
