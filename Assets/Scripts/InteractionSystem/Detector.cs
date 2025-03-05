@@ -1,5 +1,4 @@
 ﻿using InteractionSystem.Interfaces;
-using System;
 using UnityEngine;
 
 public class Detector : MonoBehaviour, IDetector
@@ -17,11 +16,7 @@ public class Detector : MonoBehaviour, IDetector
         RaycastHit raycastHit;
         if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~ignoreLayer))
         {
-            var interaction = raycastHit.collider.gameObject.GetComponent<T>();
-            if (interaction != null)
-            {
-                return interaction;
-            }
+            return raycastHit.collider.gameObject.GetComponent<T>();
         }
         return default(T);
     }
