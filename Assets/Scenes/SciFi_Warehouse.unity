@@ -3762,7 +3762,11 @@ PrefabInstance:
       objectReference: {fileID: 467851964}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Activate
+      value: Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InteractionTextDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4975399993979019661, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_Name
@@ -9964,6 +9968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274acf1e2a28ea74f9eadcfa6fb6cc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionTextComponent: {fileID: 0}
 --- !u!1001 &467912010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41508,7 +41513,11 @@ PrefabInstance:
       objectReference: {fileID: 467851964}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Activate
+      value: Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InteractionTextDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4975399993979019661, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_Name
@@ -45865,7 +45874,11 @@ PrefabInstance:
       objectReference: {fileID: 467851964}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Activate
+      value: Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InteractionTextDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4975399993979019661, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_Name
@@ -53532,8 +53545,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 467851964}
-        m_TargetAssemblyTypeName: InteractionDisplay, Assembly-CSharp
-        m_MethodName: Deactivate
+        m_TargetAssemblyTypeName: InteractionTextDisplay, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -53610,8 +53623,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 467851964}
-        m_TargetAssemblyTypeName: InteractionDisplay, Assembly-CSharp
-        m_MethodName: Deactivate
+        m_TargetAssemblyTypeName: InteractionTextDisplay, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -59891,7 +59904,11 @@ PrefabInstance:
       objectReference: {fileID: 467851964}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Activate
+      value: Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
+      propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InteractionTextDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6935417351677981081, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: m_LocalPosition.y
