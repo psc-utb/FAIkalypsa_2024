@@ -1,0 +1,28 @@
+using CodeMonkey.HealthSystemCM;
+using InteractionSystem.Interfaces;
+using UnityEngine;
+
+public class HealthSystemDisplay : MonoBehaviour, IDisplayable<HealthSystem>, IHideable
+{
+    [SerializeField]
+    GameObject healthBarUI;
+
+    public void Display(HealthSystem obj)
+    {
+        if (obj != null && obj.IsDead() == false && healthBarUI != null)
+        {
+            var healthBarScript = healthBarUI.GetComponent<HealthBarUI>();
+            healthBarScript.SetHealthSystem(obj);
+            healthBarUI.SetActive(true);
+        }
+        else
+        {
+            Hide();
+        }
+    }
+
+    public void Hide()
+    {
+        healthBarUI?.SetActive(false);
+    }
+}

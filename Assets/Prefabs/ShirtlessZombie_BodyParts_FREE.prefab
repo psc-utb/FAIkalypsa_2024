@@ -2804,6 +2804,7 @@ GameObject:
   - component: {fileID: 1438263110315489845}
   - component: {fileID: 625432572544680584}
   - component: {fileID: 4250294865337329980}
+  - component: {fileID: 8315684655227487919}
   - component: {fileID: 8274410740146518286}
   m_Layer: 8
   m_Name: ShirtlessZombie_BodyParts_FREE
@@ -2936,7 +2937,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ZombieController, Assembly-CSharp
-        m_MethodName: Dead
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2958,6 +2959,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8315684655227487919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895698127026766484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799f3223e4aad4f47abf68c432926668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSystemComponent: {fileID: 4250294865337329980}
 --- !u!114 &8274410740146518286
 MonoBehaviour:
   m_ObjectHideFlags: 0

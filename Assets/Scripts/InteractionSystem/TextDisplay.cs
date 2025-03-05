@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
-public class InteractionTextDisplay : MonoBehaviour, IDisplayable<string>, IHideable
+public class TextDisplay : MonoBehaviour, IDisplayable<string>, IHideable
 {
     TextMeshProUGUI interactionText;
 

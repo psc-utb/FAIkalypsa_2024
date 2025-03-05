@@ -2645,6 +2645,7 @@ GameObject:
   - component: {fileID: 5543203510496117341}
   - component: {fileID: 7629902907874732043}
   - component: {fileID: 1801144381518419937}
+  - component: {fileID: 9129210979810639877}
   - component: {fileID: 7449186291865267508}
   m_Layer: 8
   m_Name: ShirtlessZombie_FREE
@@ -2828,6 +2829,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9129210979810639877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629748121533767061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799f3223e4aad4f47abf68c432926668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSystemComponent: {fileID: 1801144381518419937}
 --- !u!114 &7449186291865267508
 MonoBehaviour:
   m_ObjectHideFlags: 0
