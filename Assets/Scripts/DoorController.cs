@@ -1,7 +1,6 @@
 using InteractionSystem.Interfaces;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class DoorController : MonoBehaviour, IInteractable, IInformable<string>
