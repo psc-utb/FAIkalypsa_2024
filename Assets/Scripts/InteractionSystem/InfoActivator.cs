@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class InfoActivator : Activator<IInformable<string>>
 {
     [SerializeField]
-    protected UnityEvent<IInformable<string>> objectWithInfoDetected;
+    protected UnityEvent<IInformable<string>> objectActivated;
 
     protected new void Awake()
     {
@@ -16,11 +16,12 @@ public class InfoActivator : Activator<IInformable<string>>
     protected void Update()
     {
         if (Activate() == false)
-            objectWithInfoDetected?.Invoke(null);
+            objectActivated?.Invoke(null);
     }
 
     protected override void Activation(IInformable<string> obj)
     {
-        objectWithInfoDetected?.Invoke(obj);
+        obj.Inform();
+        objectActivated?.Invoke(obj);
     }
 }
