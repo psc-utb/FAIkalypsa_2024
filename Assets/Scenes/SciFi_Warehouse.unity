@@ -53540,22 +53540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f376df8945434399de9ba08591889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDetector: {fileID: 1994486377}
-  objectActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 467851964}
-        m_TargetAssemblyTypeName: InteractionTextDisplay, Assembly-CSharp
-        m_MethodName: Hide
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  detector: {fileID: 1994486377}
+  displayable: {fileID: 467851961}
+  hideable: {fileID: 467851961}
 --- !u!114 &1994486366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53618,7 +53605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2106f39b056c5c478963d09fa5de3f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDetector: {fileID: 1994486377}
+  detector: {fileID: 1994486377}
   objectActivated:
     m_PersistentCalls:
       m_Calls:

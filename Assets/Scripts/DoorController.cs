@@ -15,12 +15,8 @@ public class DoorController : MonoBehaviour, IInteractable, IInformable<string>,
     bool opened = true;
 
     [SerializeField]
-    UnityEvent<string> InteractionInfoRequested;
-
-    [SerializeField]
     InputActionAsset inputActionAsset; 
 
-    // Start is called before the first frame update
     void Start()
     {
         _animator = doorToInteract.GetComponent<Animator>();
@@ -53,6 +49,7 @@ public class DoorController : MonoBehaviour, IInteractable, IInformable<string>,
     public string Inform()
     {
         string textWithInformation = string.Empty;
+
         if (opened)
         {
             var bindingKey = inputActionAsset
@@ -62,12 +59,7 @@ public class DoorController : MonoBehaviour, IInteractable, IInformable<string>,
                             .FirstOrDefault(action => action.name == "Interaction")
                             .GetBindingDisplayString();
             textWithInformation = $"Press {bindingKey} to close";
-            InteractionInfoRequested?.Invoke(textWithInformation);
         }
-        /*else
-        {
-            InteractionInfoRequested?.Invoke("Press E to open");
-        }*/
 
         return textWithInformation;
     }

@@ -4,12 +4,12 @@ using UnityEngine;
 public abstract class Activator<T> : MonoBehaviour, IActivator
 {
     [SerializeField]
-    Component interactionDetector;
+    Component detector;
     IDetector _detector;
 
     protected void Awake()
     {
-        _detector = interactionDetector.GetComponent<IDetector>();
+        _detector = detector.GetComponent<IDetector>();
     }
 
     public bool Activate()
