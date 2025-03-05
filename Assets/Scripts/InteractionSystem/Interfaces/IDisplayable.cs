@@ -1,8 +1,8 @@
 ﻿
 namespace InteractionSystem.Interfaces
 {
-    public interface IDisplayable
+    public interface IDisplayable<T>
     {
-        void Display();
+        void Display(T obj);
     }
 }
