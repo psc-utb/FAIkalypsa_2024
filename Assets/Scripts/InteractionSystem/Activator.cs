@@ -7,8 +7,6 @@ public abstract class Activator<T> : MonoBehaviour, IActivator
     Component detector;
     IDetector _detector;
 
-    public bool IsActivated { get; private set;}
-
     protected void Awake()
     {
         _detector = detector.GetComponent<IDetector>();
@@ -22,12 +20,10 @@ public abstract class Activator<T> : MonoBehaviour, IActivator
             if (objectDetected != null)
             {
                 Activation(objectDetected);
-                IsActivated = true;
-                return IsActivated;
+                return true;
             }
         }
-        IsActivated = false;
-        return IsActivated;
+        return false;
     }
 
     protected abstract void Activation(T obj);

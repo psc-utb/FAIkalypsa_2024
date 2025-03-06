@@ -2,10 +2,12 @@ using CodeMonkey.HealthSystemCM;
 using InteractionSystem.Interfaces;
 using UnityEngine;
 
-public class HealthSystemDisplay : MonoBehaviour, IDisplayable<HealthSystem>, IHideable
+public class HealthSystemDisplay : MonoBehaviour, IDisplayable<HealthSystem>, IHideable, IActivable
 {
     [SerializeField]
     GameObject healthBarUI;
+
+    public bool IsActivated => healthBarUI.activeSelf;
 
     public void Display(HealthSystem obj)
     {

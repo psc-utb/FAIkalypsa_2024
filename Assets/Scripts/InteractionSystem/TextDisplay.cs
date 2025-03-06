@@ -3,12 +3,15 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
-public class TextDisplay : MonoBehaviour, IDisplayable<string>, IHideable
+public class TextDisplay : MonoBehaviour, IDisplayable<string>, IHideable, IActivable
 {
     TextMeshProUGUI interactionText;
 
     [SerializeField]
     Component interactionTextComponent;
+
+    public bool IsActivated { get; private set; }
+
     //ITextable _textObject;
 
     // Start is called before the first frame update
@@ -20,12 +23,14 @@ public class TextDisplay : MonoBehaviour, IDisplayable<string>, IHideable
     public void Display(string text)
     {
         interactionText.text = text;
+        IsActivated = true;
         //interactionText.enabled = true;
     }
 
     public void Hide()
     {
         interactionText.text = string.Empty;
+        IsActivated = false;
         //interactionText.enabled = false;
     }
 

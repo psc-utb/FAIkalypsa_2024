@@ -5,11 +5,11 @@ public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
 {
     [SerializeField]
     Component displayable;
-    IDisplayable<T> _displayable;
+    protected IDisplayable<T> _displayable;
 
     [SerializeField]
     Component hideable;
-    IHideable _hideable;
+    protected IHideable _hideable;
 
     protected new void Awake()
     {
