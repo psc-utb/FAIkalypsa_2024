@@ -4,7 +4,8 @@ public class InformationTextActivator : InformationActivator<string>
     // Update is called once per frame
     protected void Update()
     {
-        if (Activate() == false)
+        bool wasActive = IsActivated;
+        if (Activate() == false && wasActive == true)
         {
             Deactivate();
         }

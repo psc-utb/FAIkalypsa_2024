@@ -5,7 +5,8 @@ public class InformationHealthSystemActivator : InformationActivator<HealthSyste
     // Update is called once per frame
     protected void Update()
     {
-        if (Activate() == false)
+        bool wasActive = IsActivated;
+        if (Activate() == false && wasActive == true)
         {
             Deactivate();
         }
