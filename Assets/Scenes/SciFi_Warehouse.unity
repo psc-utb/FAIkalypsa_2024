@@ -39781,6 +39781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1616309001}
+  - component: {fileID: 1616309005}
   - component: {fileID: 1616309004}
   - component: {fileID: 1616309003}
   - component: {fileID: 1616309002}
@@ -39844,6 +39845,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e418e94f33372f74085c768f62f646f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistanceDetection: 2.5
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 8256
+  sensor: {fileID: 1616309005}
+  sensorActivatedSeparately: 1
+--- !u!114 &1616309005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616309000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6729cde2a9b4b1093e5218f91072a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceDetection: 2.5
@@ -45805,6 +45824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1854388481}
+  - component: {fileID: 1854388484}
   - component: {fileID: 1854388482}
   - component: {fileID: 1854388483}
   m_Layer: 6
@@ -45845,6 +45865,8 @@ MonoBehaviour:
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 26720
+  sensor: {fileID: 1854388484}
+  sensorActivatedSeparately: 1
 --- !u!114 &1854388483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45860,6 +45882,22 @@ MonoBehaviour:
   detector: {fileID: 1854388482}
   displayable: {fileID: 878642256}
   hideable: {fileID: 878642256}
+--- !u!114 &1854388484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854388480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6729cde2a9b4b1093e5218f91072a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistanceDetection: 20
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 26720
 --- !u!1001 &1865152259
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,19 +4,28 @@ using UnityEngine;
 public class Detector : MonoBehaviour, IDetector
 {
     [SerializeField]
-    float maxDistanceDetection = 1f;
-    public float MaxDistanceDetection { get => maxDistanceDetection; set => maxDistanceDetection = value; }
+    Component sensor;
+    ISensor<GameObject> _sensor;
 
     [SerializeField]
-    LayerMask ignoreLayer;
-    public LayerMask IgnoreLayer => ignoreLayer;
+    bool sensorActivatedSeparately = true;
+    public bool SensorActivatedSeparately { get => sensorActivatedSeparately; set => sensorActivatedSeparately = value; }
+
+    protected void Awake()
+    {
+        _sensor = sensor.GetComponent<ISensor<GameObject>>();
+    }
 
     public T Detect<T>()
     {
-        RaycastHit raycastHit;
-        if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~ignoreLayer))
+        if (sensorActivatedSeparately == true)
         {
-            return raycastHit.collider.gameObject.GetComponent<T>();
+            _sensor.Sense();
+        }
+        GameObject sensedObject = _sensor.SensedObject;
+        if (sensedObject != null)
+        {
+            return sensedObject.GetComponent<T>();
         }
         return default(T);
     }
