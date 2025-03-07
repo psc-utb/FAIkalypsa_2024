@@ -142,7 +142,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IDeactivator">
-    <Position X="6" Y="1.75" Width="1.5" />
+    <Position X="6" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IDeactivator.cs</FileName>
