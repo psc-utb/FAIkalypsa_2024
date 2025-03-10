@@ -4,27 +4,22 @@ using UnityEngine;
 public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
 {
     [SerializeField]
-    Component displayable;
-    protected IDisplayable<T> _displayable;
-
-    [SerializeField]
-    Component hideable;
-    protected IHideable _hideable;
+    Component displayManagement;
+    protected IDisplayManagement<T> _displayManagement;
 
     protected new void Awake()
     {
         base.Awake();
-        _displayable = displayable.GetComponent<IDisplayable<T>>();
-        _hideable = hideable.GetComponent<IHideable>();
+        _displayManagement = displayManagement.GetComponent<IDisplayManagement<T>>();
     }
 
     protected override void Activation(IInformable<T> obj)
     {
-        _displayable.Display(obj.Inform());
+        _displayManagement.Display(obj.Inform());
     }
 
     public void Deactivate()
     {
-        _hideable.Hide();
+        _displayManagement.Hide();
     }
 }

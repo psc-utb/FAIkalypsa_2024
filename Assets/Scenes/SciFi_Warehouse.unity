@@ -39833,8 +39833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detector: {fileID: 1616309004}
-  displayable: {fileID: 467851961}
-  hideable: {fileID: 467851961}
+  displayManagement: {fileID: 467851961}
 --- !u!114 &1616309004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39847,10 +39846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e418e94f33372f74085c768f62f646f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceDetection: 2.5
-  ignoreLayer:
-    serializedVersion: 2
-    m_Bits: 8256
   sensor: {fileID: 1616309005}
   sensorActivatedSeparately: 1
 --- !u!114 &1616309005
@@ -45861,10 +45856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e418e94f33372f74085c768f62f646f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceDetection: 20
-  ignoreLayer:
-    serializedVersion: 2
-    m_Bits: 26720
   sensor: {fileID: 1854388484}
   sensorActivatedSeparately: 1
 --- !u!114 &1854388483
@@ -45880,8 +45871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detector: {fileID: 1854388482}
-  displayable: {fileID: 878642256}
-  hideable: {fileID: 878642256}
+  displayManagement: {fileID: 878642256}
 --- !u!114 &1854388484
 MonoBehaviour:
   m_ObjectHideFlags: 0

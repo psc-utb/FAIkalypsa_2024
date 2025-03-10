@@ -2,7 +2,7 @@ using CodeMonkey.HealthSystemCM;
 using InteractionSystem.Interfaces;
 using UnityEngine;
 
-public class HealthSystemDisplay : MonoBehaviour, IDisplayable<HealthSystem>, IHideable, IActivable
+public class HealthSystemDisplay : MonoBehaviour, IDisplayManagement<HealthSystem>
 {
     [SerializeField]
     GameObject healthBarUI;
