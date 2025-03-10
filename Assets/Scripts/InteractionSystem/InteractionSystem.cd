@@ -32,7 +32,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HealthInformation">
-    <Position X="11.25" Y="3" Width="2.5" />
+    <Position X="11.25" Y="2.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\HealthInformation.cs</FileName>
@@ -40,7 +40,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HealthSystemDisplay">
-    <Position X="26.25" Y="4.25" Width="2.5" />
+    <Position X="29.75" Y="4.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAEAAAAQAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\HealthSystemDisplay.cs</FileName>
@@ -78,7 +78,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="TextDisplay">
-    <Position X="29.25" Y="4.25" Width="3.25" />
+    <Position X="25.75" Y="4.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACCEAAAAQAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\TextDisplay.cs</FileName>
@@ -93,7 +93,7 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="InteractionSystem.Interfaces.IInteractable">
-    <Position X="8.5" Y="0.75" Width="2" />
+    <Position X="8" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInteractable.cs</FileName>
@@ -107,14 +107,14 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IInformable&lt;T&gt;">
-    <Position X="11.5" Y="0.75" Width="2" />
+    <Position X="10.5" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInformable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IDetector">
-    <Position X="5.25" Y="1" Width="1.5" />
+    <Position X="5.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IDetector.cs</FileName>
@@ -155,7 +155,7 @@
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IActivable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="InteractionSystem.Interfaces.IDisplayManagement&lt;T&gt;" Collapsed="true">
+  <Interface Name="InteractionSystem.Interfaces.IDisplayManagement&lt;T&gt;">
     <Position X="28" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
