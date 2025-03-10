@@ -1,41 +1,15 @@
-using InteractionSystem.Interfaces;
-using TMPro;
-using UnityEngine;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
-public class TextDisplay : MonoBehaviour, IDisplayManagement<string>
+public class TextDisplay : DisplayBase<string>
 {
-    TMP_Text interactionText;
-
-    public bool IsActivated { get; private set; }
-
-    //ITextable _textObject;
-
-    // Start is called before the first frame update
-    protected void Awake()
+    public override void Display(string text)
     {
-        interactionText = GetComponent<TextMeshProUGUI>();
-    }
-
-    public void Display(string text)
-    {
-        interactionText.text = text;
+        infoElement.SetInformation(text);
         IsActivated = true;
-        //interactionText.enabled = true;
     }
 
-    public void Hide()
+    public override void Hide()
     {
-        interactionText.text = string.Empty;
+        infoElement.SetInformation(string.Empty);
         IsActivated = false;
-        //interactionText.enabled = false;
     }
-
-    /*public void Hide(IInformable<string> objToInteract)
-    {
-        if (objToInteract == null)
-        {
-            Hide();
-        }
-    }*/
 }

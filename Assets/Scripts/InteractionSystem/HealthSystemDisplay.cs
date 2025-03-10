@@ -1,21 +1,14 @@
 using CodeMonkey.HealthSystemCM;
-using InteractionSystem.Interfaces;
-using UnityEngine;
 
-public class HealthSystemDisplay : MonoBehaviour, IDisplayManagement<HealthSystem>
+public class HealthSystemDisplay : DisplayBase<HealthSystem>
 {
-    [SerializeField]
-    GameObject healthBarUI;
+    public override bool IsActivated => infoElement.IsActivated;
 
-    public bool IsActivated => healthBarUI.activeSelf;
-
-    public void Display(HealthSystem obj)
+    public override void Display(HealthSystem obj)
     {
-        if (obj != null && obj.IsDead() == false && healthBarUI != null)
+        if (obj != null && obj.IsDead() == false && infoElement != null)
         {
-            var healthBarScript = healthBarUI.GetComponent<HealthBarUI>();
-            healthBarScript.SetHealthSystem(obj);
-            healthBarUI.SetActive(true);
+            infoElement.SetInformation(obj);
         }
         else
         {
@@ -23,8 +16,8 @@ public class HealthSystemDisplay : MonoBehaviour, IDisplayManagement<HealthSyste
         }
     }
 
-    public void Hide()
+    public override void Hide()
     {
-        healthBarUI?.SetActive(false);
+        infoElement.SetInformation(null);
     }
 }

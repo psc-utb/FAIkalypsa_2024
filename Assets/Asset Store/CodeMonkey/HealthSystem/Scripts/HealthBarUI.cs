@@ -19,7 +19,7 @@ namespace CodeMonkey.HealthSystemCM {
         private HealthSystem healthSystem;
 
 
-        private void Start() {
+        protected void Start() {
             if (HealthSystem.TryGetHealthSystem(getHealthSystemGameObject, out HealthSystem healthSystem)) {
                 SetHealthSystem(healthSystem);
             }
