@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="InteractionActivator">
-    <Position X="9.75" Y="3.75" Width="3.25" />
+    <Position X="14.75" Y="5.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAEEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\InteractionActivator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Detector">
-    <Position X="2.75" Y="2" Width="3" />
+    <Position X="4.5" Y="2.75" Width="3" />
     <TypeIdentifier>
       <HashCode>AgABAAAAAAAAIAAAgAAAAgAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Detector.cs</FileName>
@@ -16,7 +16,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DoorInteraction">
-    <Position X="6.5" Y="5.5" Width="2.75" />
+    <Position X="8" Y="2.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAACAAAAAAAAAAAAAAYAABABAAIAAAAACAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\DoorInteraction.cs</FileName>
@@ -24,7 +24,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Activator&lt;T&gt;">
-    <Position X="7.75" Y="0.5" Width="2" />
+    <Position X="16.5" Y="2.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAABAAAAAAAAAAAAAAAIAAAAAAAAAEEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Activator.cs</FileName>
@@ -32,7 +32,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HealthInformation">
-    <Position X="10" Y="5.75" Width="2.5" />
+    <Position X="11.25" Y="3" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\HealthInformation.cs</FileName>
@@ -40,7 +40,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HealthSystemDisplay">
-    <Position X="13.75" Y="4.25" Width="2.5" />
+    <Position X="26.25" Y="4.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAEAAAAQAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\HealthSystemDisplay.cs</FileName>
@@ -48,29 +48,29 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="InformationActivator&lt;T&gt;">
-    <Position X="10.5" Y="0.5" Width="2.75" />
+    <Position X="20" Y="2.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAFAAAAAAAAAAAAAAAAAEAAAAAAAAAQAEUA=</HashCode>
+      <HashCode>AAAQAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\InformationActivator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="InformationHealthSystemActivator">
-    <Position X="14.25" Y="0.5" Width="2.5" />
+    <Position X="21.5" Y="5.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\InformationHealthSystemActivator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InformationTextActivator">
-    <Position X="14.25" Y="2" Width="2" />
+    <Position X="18.75" Y="5.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\InformationTextActivator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sensor">
-    <Position X="3" Y="5.5" Width="3" />
+    <Position X="0.75" Y="2.75" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAgIAAAAAAACAAAAAAAQgAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Sensor.cs</FileName>
@@ -78,81 +78,88 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="TextDisplay">
-    <Position X="16.75" Y="4.25" Width="3.25" />
+    <Position X="29.25" Y="4.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAKAAAACCEAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACCEAAAAQAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\TextDisplay.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SensorContinuous">
-    <Position X="3.75" Y="8.75" Width="1.5" />
+    <Position X="1.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\SensorContinuous.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="InteractionSystem.Interfaces.IInteractable">
-    <Position X="0.5" Y="0.5" Width="2" />
+    <Position X="8.5" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInteractable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IActivator">
-    <Position X="5.75" Y="0.5" Width="1.75" />
+    <Position X="16.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IActivator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IInformable&lt;T&gt;">
-    <Position X="0.5" Y="2" Width="2" />
+    <Position X="11.5" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInformable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IDetector">
-    <Position X="3" Y="0.5" Width="1.5" />
+    <Position X="5.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IDetector.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.ISensor&lt;T&gt;">
-    <Position X="0.5" Y="3.25" Width="2" />
+    <Position X="1.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\ISensor.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IHideable">
-    <Position X="0.75" Y="8" Width="1.5" />
+    <Position X="28.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IHideable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IDisplayable&lt;T&gt;">
-    <Position X="0.75" Y="6.5" Width="1.75" />
+    <Position X="25.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IDisplayable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IDeactivator">
-    <Position X="6" Y="2" Width="1.5" />
+    <Position X="20.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IDeactivator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IActivable">
-    <Position X="0.75" Y="5" Width="1.5" />
+    <Position X="30.5" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IActivable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InteractionSystem.Interfaces.IDisplayManagement&lt;T&gt;" Collapsed="true">
+    <Position X="28" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Interfaces\IDisplayManagement.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

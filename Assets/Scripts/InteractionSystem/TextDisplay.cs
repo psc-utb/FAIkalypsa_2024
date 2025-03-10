@@ -5,17 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TextDisplay : MonoBehaviour, IDisplayManagement<string>
 {
-    TextMeshProUGUI interactionText;
-
-    [SerializeField]
-    Component interactionTextComponent;
+    TMP_Text interactionText;
 
     public bool IsActivated { get; private set; }
 
     //ITextable _textObject;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Awake()
     {
         interactionText = GetComponent<TextMeshProUGUI>();
     }
@@ -34,11 +31,11 @@ public class TextDisplay : MonoBehaviour, IDisplayManagement<string>
         //interactionText.enabled = false;
     }
 
-    public void Hide(IInformable<string> objToInteract)
+    /*public void Hide(IInformable<string> objToInteract)
     {
         if (objToInteract == null)
         {
             Hide();
         }
-    }
+    }*/
 }
