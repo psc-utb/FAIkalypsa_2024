@@ -1,24 +1,19 @@
 using InteractionSystem.Interfaces;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class DoorInteraction : MonoBehaviour, IInteractable, IInformable<string>
+public class DoorInteraction : MonoBehaviour, IInteractable
 {
     [SerializeField]
     GameObject doorToInteract;
 
     Animator _animator;
+    //IOpenable doorState;
 
-    [SerializeField]
-    bool opened = true;
-
-    [SerializeField]
-    InputActionAsset inputActionAsset; 
 
     void Start()
     {
         _animator = doorToInteract.GetComponent<Animator>();
+        //doorState = doorToInteract.GetComponent<IOpenable>();
     }
 
     public void Close()
@@ -33,33 +28,15 @@ public class DoorInteraction : MonoBehaviour, IInteractable, IInformable<string>
 
     public void Interact()
     {
-        if (opened)
+        if (/*doorState.Opened*/ _animator.GetCurrentAnimatorStateInfo(0).IsName("Open"))
         {
             Close();
-            opened = false;
+            //doorState.Opened = false;
         }
         /*else
         {
             Open();
-            opened = true;
+            doorState.Opened = true;
         }*/
-    }
-
-    public string Inform()
-    {
-        string textWithInformation = string.Empty;
-
-        if (opened)
-        {
-            var bindingKey = inputActionAsset
-                            .actionMaps
-                            .FirstOrDefault(inputActionMap => inputActionMap.name == "Player")
-                            .actions
-                            .FirstOrDefault(action => action.name == "Interaction")
-                            .GetBindingDisplayString();
-            textWithInformation = $"Press {bindingKey} to close";
-        }
-
-        return textWithInformation;
     }
 }

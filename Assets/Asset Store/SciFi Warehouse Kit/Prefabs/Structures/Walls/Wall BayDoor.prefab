@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7133350039895356201}
   - component: {fileID: 3366451464691070183}
   - component: {fileID: 3592370489233783465}
+  - component: {fileID: 1175755690077518436}
   m_Layer: 11
   m_Name: Bay Door Frame
   m_TagString: Untagged
@@ -119,22 +120,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorToInteract: {fileID: 4975399993979019661}
-  opened: 1
-  InteractionInfoRequested:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InteractionDisplay, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &1175755690077518436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933807477239654733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0629cc0f5d4014b47b71821046aad1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorWhichInforms: {fileID: 4975399993979019661}
   inputActionAsset: {fileID: -944628639613478452, guid: 8fd7f5c636620a144a121c7fa3761964, type: 3}
 --- !u!1 &2647211758135124163
 GameObject:
