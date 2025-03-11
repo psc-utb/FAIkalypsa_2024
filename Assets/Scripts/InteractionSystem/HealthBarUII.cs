@@ -1,7 +1,7 @@
 ﻿using CodeMonkey.HealthSystemCM;
 using InteractionSystem.Interfaces;
 
-public class HealthBarUII : HealthBarUI, IInformationElement<HealthSystem>
+public class HealthBarUII : HealthBarUI, IInformationActivableElement<HealthSystem>
 {
     public bool IsActivated => this.gameObject.activeSelf;
 
