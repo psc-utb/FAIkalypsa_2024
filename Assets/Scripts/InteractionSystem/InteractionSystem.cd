@@ -28,7 +28,7 @@
   <Class Name="DoorInteraction">
     <Position X="32.5" Y="3" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAACAAAAAAAAAAAAAAYAABABAAIAAAAACAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAYAAAAAAAIAAAAACAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\DoorInteraction.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -54,7 +54,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HealthInformation">
-    <Position X="35.75" Y="3" Width="2.5" />
+    <Position X="39.75" Y="3" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\HealthInformation.cs</FileName>
@@ -133,21 +133,18 @@
   </Class>
   <Class Name="DisplayBase&lt;T&gt;">
     <Position X="20.5" Y="4.5" Width="2.75" />
-    <AssociationLine Name="infoElement" Type="InteractionSystem.Interfaces.IInformationElement&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="23.25" Y="6.855" />
-        <Point X="24.415" Y="6.855" />
-        <Point X="24.415" Y="3" />
-        <Point X="26.75" Y="3" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAMAAAAQAAAAgAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\DisplayBase.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="infoElement" />
-    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoorInformation">
+    <Position X="36.25" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAAAAAgAAAAABAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\DoorInformation.cs</FileName>
+    </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="InteractionSystem.Interfaces.IInteractable">
@@ -165,7 +162,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IInformable&lt;T&gt;">
-    <Position X="35" Y="0.5" Width="2" />
+    <Position X="36.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInformable.cs</FileName>
@@ -221,17 +218,31 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="InteractionSystem.Interfaces.IInformationElement&lt;T&gt;">
-    <Position X="26.75" Y="2.5" Width="2.25" />
-    <InheritanceLine Type="InteractionSystem.Interfaces.IActivable" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="25.25" Y="1.062" />
-        <Point X="27.812" Y="1.062" />
-        <Point X="27.812" Y="2.5" />
-      </Path>
-    </InheritanceLine>
+    <Position X="28.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInformationElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InteractionSystem.Interfaces.IInformationActivableElement&lt;T&gt;">
+    <Position X="25.5" Y="2.5" Width="2.5" />
+    <InheritanceLine Type="InteractionSystem.Interfaces.IInformationElement&lt;T&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="28.25" Y="1.125" />
+        <Point X="27.406" Y="1.125" />
+        <Point X="27.406" Y="2.5" />
+      </Path>
+    </InheritanceLine>
+    <InheritanceLine Type="InteractionSystem.Interfaces.IActivable" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.25" Y="1.125" />
+        <Point X="26.75" Y="1.125" />
+        <Point X="26.75" Y="2.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem\Interfaces\IInformationElementActivable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
