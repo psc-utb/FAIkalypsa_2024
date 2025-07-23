@@ -21,7 +21,7 @@ public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
 
     public void Deactivate()
     {
-        //_informationActivableManagement.SetInformation(null);
+        _displayManagement.SetInformation(default);
         _displayManagement.IsActivated = false;
     }
 }
