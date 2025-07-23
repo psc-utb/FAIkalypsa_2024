@@ -12,7 +12,7 @@ public abstract class DisplayBase<T> : MonoBehaviour, IDisplayManagement<T>
         infoElement = UIComponent.GetComponent<IInformationActivableElement<T>>();
     }
 
-    public virtual bool IsActivated { get; protected set; }
+    public virtual bool IsActivated { get; set; }
 
     public abstract void Display(T obj);
     public abstract void Hide();

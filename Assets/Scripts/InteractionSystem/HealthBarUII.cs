@@ -3,7 +3,11 @@ using InteractionSystem.Interfaces;
 
 public class HealthBarUII : HealthBarUI, IInformationActivableElement<HealthSystem>
 {
-    public bool IsActivated => this.gameObject.activeSelf;
+    public bool IsActivated
+    {
+        get => this.gameObject.activeSelf;
+        set => this.gameObject.SetActive(value);
+    }
 
     protected new void Start()
     {
