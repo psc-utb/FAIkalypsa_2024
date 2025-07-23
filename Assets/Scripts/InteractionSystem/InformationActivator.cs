@@ -5,21 +5,23 @@ public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
 {
     [SerializeField]
     Component displayManagement;
-    protected IDisplayManagement<T> _displayManagement;
+    protected IInformationActivableElement<T> _displayManagement;
 
     protected new void Awake()
     {
         base.Awake();
-        _displayManagement = displayManagement.GetComponent<IDisplayManagement<T>>();
+        _displayManagement = displayManagement.GetComponent<IInformationActivableElement<T>>();
     }
 
     protected override void Activation(IInformable<T> obj)
     {
-        _displayManagement.Display(obj.Inform());
+        _displayManagement.SetInformation(obj.Inform());
+        _displayManagement.IsActivated = true;
     }
 
     public void Deactivate()
     {
-        _displayManagement.Hide();
+        //_informationActivableManagement.SetInformation(null);
+        _displayManagement.IsActivated = false;
     }
 }

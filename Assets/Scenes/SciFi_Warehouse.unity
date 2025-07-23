@@ -3759,7 +3759,7 @@ PrefabInstance:
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 467851964}
+      objectReference: {fileID: 0}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Display
@@ -9832,7 +9832,6 @@ GameObject:
   - component: {fileID: 467851961}
   - component: {fileID: 467851963}
   - component: {fileID: 467851965}
-  - component: {fileID: 467851964}
   m_Layer: 5
   m_Name: InteractionText
   m_TagString: Untagged
@@ -9867,19 +9866,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467851960}
   m_CullTransparentMesh: 1
---- !u!114 &467851964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467851960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274acf1e2a28ea74f9eadcfa6fb6cc6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIComponent: {fileID: 467851965}
 --- !u!114 &467851965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41651,7 +41637,7 @@ PrefabInstance:
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 467851964}
+      objectReference: {fileID: 0}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Display
@@ -46090,7 +46076,7 @@ PrefabInstance:
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 467851964}
+      objectReference: {fileID: 0}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Display
@@ -60064,7 +60050,7 @@ PrefabInstance:
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 467851964}
+      objectReference: {fileID: 0}
     - target: {fileID: 3592370489233783465, guid: d324de115c4dff845bee7b7f166883c4, type: 3}
       propertyPath: InteractionInfoRequested.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Display
