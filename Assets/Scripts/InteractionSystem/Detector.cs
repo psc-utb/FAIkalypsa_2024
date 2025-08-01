@@ -7,9 +7,9 @@ public class Detector : MonoBehaviour, IDetector
     Component sensor;
     ISensor<GameObject> _sensor;
 
-    [SerializeField]
-    bool sensorActivatedSeparately = true;
-    public bool SensorActivatedSeparately { get => sensorActivatedSeparately; set => sensorActivatedSeparately = value; }
+    //[SerializeField]
+    //bool sensorActivatedSeparately = true;
+    //public bool SensorActivatedSeparately { get => sensorActivatedSeparately; set => sensorActivatedSeparately = value; }
 
     protected void Awake()
     {
@@ -18,11 +18,11 @@ public class Detector : MonoBehaviour, IDetector
 
     public T Detect<T>()
     {
-        if (sensorActivatedSeparately == true)
-        {
-            _sensor.Sense();
-        }
-        GameObject sensedObject = _sensor.SensedObject;
+        /*if (sensorActivatedSeparately == true)
+        {*/
+        GameObject sensedObject = _sensor.Sense();
+        //}
+        //GameObject sensedObject = _sensor.SensedObject;
         if (sensedObject != null)
         {
             return sensedObject.GetComponent<T>();
