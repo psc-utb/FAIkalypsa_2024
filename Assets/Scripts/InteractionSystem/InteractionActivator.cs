@@ -11,9 +11,4 @@ public class InteractionActivator : Activator<IInteractable>
     {
         obj.Interact();
     }
-
-    public new void Activate()
-    {
-        bool activated = base.Activate();
-    }
 }

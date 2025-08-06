@@ -1,29 +1,24 @@
 using InteractionSystem.Interfaces;
 using UnityEngine;
 
-public abstract class Activator<T> : MonoBehaviour, IActivator
+public abstract class Activator<T> : MonoBehaviour, IActivator<T>
 {
     [SerializeField]
     Component detector;
-    IDetector _detector;
+    protected IDetector<T, GameObject> _detector;
 
     protected void Awake()
     {
-        _detector = detector.GetComponent<IDetector>();
+        _detector = detector.GetComponent<IDetector<T, GameObject>>();
+        _detector?.AttachDetected(Activate);
     }
 
-    public bool Activate()
+    public virtual void Activate(T obj)
     {
-        if (_detector != null)
+        if (obj != null)
         {
-            var objectDetected = _detector.Detect<T>();
-            if (objectDetected != null)
-            {
-                Activation(objectDetected);
-                return true;
-            }
+            Activation(obj);
         }
-        return false;
     }
 
     protected abstract void Activation(T obj);

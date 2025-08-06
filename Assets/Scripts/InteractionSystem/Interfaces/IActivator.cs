@@ -1,8 +1,8 @@
 ﻿
 namespace InteractionSystem.Interfaces
 {
-    public interface IActivator
+    public interface IActivator<T>
     {
-        bool Activate();
+        void Activate(T obj);
     }
 }

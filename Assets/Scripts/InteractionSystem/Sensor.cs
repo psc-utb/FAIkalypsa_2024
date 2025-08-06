@@ -1,29 +1,26 @@
 using InteractionSystem.Interfaces;
+using System;
 using UnityEngine;
 
-public class Sensor : MonoBehaviour, ISensor<GameObject>
+public abstract class Sensor<T> : MonoBehaviour, ISensor<T>
 {
-    [SerializeField]
-    float maxDistanceDetection = 1f;
-    public float MaxDistanceDetection { get => maxDistanceDetection; set => maxDistanceDetection = value; }
-
     [SerializeField]
     LayerMask ignoreLayer;
     public LayerMask IgnoreLayer => ignoreLayer;
 
-    public GameObject SensedObject { get; private set; }
+    public T SensedObject { get; protected set; }
 
-    public GameObject Sense()
+    Action<T> callback;
+
+    public void AttachSensed(Action<T> callback)
     {
-        RaycastHit raycastHit;
-        if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~ignoreLayer))
-        {
-            SensedObject = raycastHit.collider.gameObject;
-        }
-        else
-        {
-            SensedObject = null;
-        }
-        return SensedObject;
+        this.callback += callback;
     }
+
+    protected void NotifySensed(T obj)
+    {
+        this.callback?.Invoke(obj);
+    }
+
+    public abstract void Sense();
 }

@@ -12,6 +12,17 @@ public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
         base.Awake();
         _displayManagement = displayManagement.GetComponent<IInformationActivableElement<T>>();
     }
+    public override void Activate(IInformable<T> obj)
+    {
+        if (obj != null)
+        {
+            Activation(obj);
+        }
+        else
+        {
+            Deactivate();
+        }
+    }
 
     protected override void Activation(IInformable<T> obj)
     {

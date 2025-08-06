@@ -1,9 +1,11 @@
 ﻿
+using System;
+
 namespace InteractionSystem.Interfaces
 {
     public interface ISensor<T>
     {
-        T SensedObject { get; }
-        T Sense();
+        void Sense();
+        void AttachSensed(Action<T> callback);
     }
 }

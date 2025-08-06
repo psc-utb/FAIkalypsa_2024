@@ -1,32 +1,49 @@
 ﻿using InteractionSystem.Interfaces;
+using System;
 using UnityEngine;
 
-public class Detector : MonoBehaviour, IDetector
+public class Detector<T> : MonoBehaviour, IDetector<T, GameObject>
 {
     [SerializeField]
     Component sensor;
     ISensor<GameObject> _sensor;
 
-    //[SerializeField]
-    //bool sensorActivatedSeparately = true;
-    //public bool SensorActivatedSeparately { get => sensorActivatedSeparately; set => sensorActivatedSeparately = value; }
+    Action<T> callback;
+
+    public void AttachDetected(Action<T> callback)
+    {
+        this.callback += callback;
+    }
+
+    protected void NotifyDetected(T obj)
+    {
+        callback?.Invoke(obj);
+    }
 
     protected void Awake()
     {
         _sensor = sensor.GetComponent<ISensor<GameObject>>();
+        _sensor?.AttachSensed(Detect);
     }
 
-    public T Detect<T>()
+    //private void OnSensedObjectDetected(GameObject obj)
+    //{
+    //    if (obj != null)
+    //    {
+    //        var detectedObj = Detect();
+    //        if (detectedObj != null)
+    //        {
+    //            NotifyDetected(detectedObj);
+    //        }
+    //    }
+    //}
+
+    public virtual void Detect(GameObject obj)
     {
-        /*if (sensorActivatedSeparately == true)
-        {*/
-        GameObject sensedObject = _sensor.Sense();
-        //}
-        //GameObject sensedObject = _sensor.SensedObject;
-        if (sensedObject != null)
+        if (obj != null)
         {
-            return sensedObject.GetComponent<T>();
+            var detectedObj = obj.GetComponent<T>();
+            NotifyDetected(detectedObj);
         }
-        return default(T);
     }
 }

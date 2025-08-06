@@ -1,8 +1,11 @@
 ﻿
+using System;
+
 namespace InteractionSystem.Interfaces
 {
-    public interface IDetector
+    public interface IDetector<T, T1>
     {
-        T Detect<T>();
+        void Detect(T1 obj);
+        void AttachDetected(Action<T> callback);
     }
 }
