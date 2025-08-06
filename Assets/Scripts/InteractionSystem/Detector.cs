@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-public class Detector<T> : MonoBehaviour, IDetector<T, GameObject>
+public class Detector<T> : MonoBehaviour, IDetector<GameObject, T>
 {
     [SerializeField]
     Component sensor;
