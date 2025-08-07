@@ -3,9 +3,8 @@ using System;
 
 namespace InteractionSystem.Interfaces
 {
-    public interface IDetector<T1, T>
+    public interface IDetector<T>
     {
-        void Detect(T1 obj);
         void AttachDetected(Action<T> callback);
     }
 }

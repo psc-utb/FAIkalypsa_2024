@@ -5,11 +5,11 @@ public abstract class Activator<T> : MonoBehaviour, IActivator<T>
 {
     [SerializeField]
     Component detector;
-    protected IDetector<GameObject, T> _detector;
+    protected IDetector<T> _detector;
 
     protected void Awake()
     {
-        _detector = detector.GetComponent<IDetector<GameObject, T>>();
+        _detector = detector.GetComponent<IDetector<T>>();
         _detector?.AttachDetected(Activate);
     }
 
