@@ -1,8 +1,8 @@
 ﻿
 namespace InteractionSystem.Interfaces
 {
-    public interface IDeactivator
+    public interface IDeactivator<T>
     {
-        void Deactivate();
+        void Deactivate(T obj);
     }
 }

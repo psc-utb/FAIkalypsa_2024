@@ -1,7 +1,7 @@
 using InteractionSystem.Interfaces;
 using UnityEngine;
 
-public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
+public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator<IInformable<T>>
 {
     [SerializeField]
     Component displayManagement;
@@ -10,6 +10,7 @@ public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
     protected new void Awake()
     {
         base.Awake();
+        _detector?.AttachDetected(Deactivate);
         _displayManagement = displayManagement.GetComponent<IInformationActivableElement<T>>();
     }
     public override void Activate(IInformable<T> obj)
@@ -17,10 +18,6 @@ public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
         if (obj != null)
         {
             Activation(obj);
-        }
-        else
-        {
-            Deactivate();
         }
     }
 
@@ -30,9 +27,12 @@ public class InformationActivator<T> : Activator<IInformable<T>>, IDeactivator
         _displayManagement.IsActivated = true;
     }
 
-    public void Deactivate()
+    public void Deactivate(IInformable<T> obj)
     {
-        _displayManagement.SetInformation(default);
-        _displayManagement.IsActivated = false;
+        if (obj == null)
+        {
+            _displayManagement.SetInformation(default);
+            _displayManagement.IsActivated = false;
+        }
     }
 }
