@@ -2,11 +2,10 @@
 using System;
 using UnityEngine;
 
-public class Detector<T> : MonoBehaviour, IDetector<T>
+
+public abstract class Detector<T1, T> : MonoBehaviour, IDetector<T>
 {
-    [SerializeField]
-    Component sensor;
-    ISensor<GameObject> _sensor;
+    protected ISensor<T1> _sensor;
 
     Action<T> callback;
 
@@ -22,23 +21,24 @@ public class Detector<T> : MonoBehaviour, IDetector<T>
 
     protected void Awake()
     {
-        _sensor = sensor.GetComponent<ISensor<GameObject>>();
         _sensor?.AttachSensed(Detect);
     }
 
-    //private void OnSensedObjectDetected(GameObject obj)
-    //{
-    //    if (obj != null)
-    //    {
-    //        var detectedObj = Detect();
-    //        if (detectedObj != null)
-    //        {
-    //            NotifyDetected(detectedObj);
-    //        }
-    //    }
-    //}
+    public abstract void Detect(T1 obj);
+}
 
-    public virtual void Detect(GameObject obj)
+public class Detector<T> : Detector<GameObject, T>, IDetector<T>
+{
+    [SerializeField]
+    Component sensor;
+
+    protected void Awake()
+    {
+        _sensor = sensor.GetComponent<ISensor<GameObject>>();
+        base.Awake();
+    }
+
+    public override void Detect(GameObject obj)
     {
         if (obj != null)
         {
