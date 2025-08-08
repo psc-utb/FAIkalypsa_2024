@@ -1,12 +1,13 @@
+using InteractionSystem.Interfaces;
 using UnityEngine;
 
-public class SensorInputed : Sensor<GameObject>
+public class SensorInputed : Sensor<GameObject>, ISensor
 {
     [SerializeField]
     float maxDistanceDetection = 1f;
     public float MaxDistanceDetection { get => maxDistanceDetection; set => maxDistanceDetection = value; }
 
-    public override void Sense()
+    public void Sense()
     {
         RaycastHit raycastHit;
         if (Physics.Raycast(transform.position, transform.forward, out raycastHit, maxDistanceDetection, ~IgnoreLayer))

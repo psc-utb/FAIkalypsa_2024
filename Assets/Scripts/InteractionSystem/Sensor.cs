@@ -21,6 +21,4 @@ public abstract class Sensor<T> : MonoBehaviour, ISensor<T>
     {
         this.callback?.Invoke(obj);
     }
-
-    public abstract void Sense();
 }
