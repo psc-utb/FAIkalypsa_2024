@@ -59,6 +59,7 @@ public class PlayerMovementCCScript : MonoBehaviour
 
 
     InputAction moveAction;
+    InputAction crouchAction;
 
     /*
 	 * Getting the Players CharacterController component.
@@ -72,6 +73,7 @@ public class PlayerMovementCCScript : MonoBehaviour
         ignoreLayer = 1 << LayerMask.NameToLayer("Player");
 
         moveAction = InputSystem.actions.FindAction("Move");
+        crouchAction = InputSystem.actions.FindAction("Crouch");
     }
 
 
@@ -274,7 +276,7 @@ public class PlayerMovementCCScript : MonoBehaviour
 	*/
     void Crouching()
     {
-        if (Input.GetKey(KeyCode.C))
+        if (crouchAction.IsPressed())
         {
             transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 0.6f, 1), Time.deltaTime * 15);
         }
