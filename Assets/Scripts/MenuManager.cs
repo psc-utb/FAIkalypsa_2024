@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class MenuManager : MonoBehaviour
 {
@@ -15,11 +16,26 @@ public class MenuManager : MonoBehaviour
     GameObject player;
     GunInventoryCC GunInventory;
 
+    //varianta s vygenerovanym C# souborem inputu
+    InputActions inputActions;
+    //InputAction menuAction;
+
     // set things up here
     void Awake()
     {
         audioListenerInScene = FindObjectOfType<AudioListener>();   //najde audio listener ve scene (mel by existovat jen jeden)
+
+        //samostatna vlastni instance se vstupními akcemi
+        inputActions = new InputActions();
+        //menuAction = InputSystem.actions.FindAction("Menu");
+
+        inputActions.UI.Menu.performed += callbackContext => ShowHideMenu();
+        //menuAction.performed += callbackContext => ShowHideMenu();
     }
+
+    //musi dojit k zapnuti mapovani na UI, jinak k eventu nikdy nedojde!
+    private void OnEnable() => inputActions.UI.Enable();
+    private void OnDisable() => inputActions.UI.Disable();
 
     private void Start()
     {
@@ -29,13 +45,13 @@ public class MenuManager : MonoBehaviour
     // game loop
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
             ShowHideMenu();
-        }
+        }*/
     }
 
-    public void ShowHideMenu()
+    private void ShowHideMenu()
     {
         if (Time.realtimeSinceStartup > 1f)
         {
