@@ -1,6 +1,7 @@
 using CodeMonkey.HealthSystemCM;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovementCCScript : MonoBehaviour
@@ -57,6 +58,8 @@ public class PlayerMovementCCScript : MonoBehaviour
     private bool rayCastGrounded;
 
 
+    InputAction moveAction;
+
     /*
 	 * Getting the Players CharacterController component.
 	 * And grabbing the mainCamera from Players child transform.
@@ -68,6 +71,7 @@ public class PlayerMovementCCScript : MonoBehaviour
         bulletSpawn = cameraMain.Find("BulletSpawn").transform;
         ignoreLayer = 1 << LayerMask.NameToLayer("Player");
 
+        moveAction = InputSystem.actions.FindAction("Move");
     }
 
 
@@ -114,11 +118,25 @@ public class PlayerMovementCCScript : MonoBehaviour
 
         Vector3 velocity = new Vector3();
 
+        //new way using new Input System
+        Vector2 moveValue = moveAction.ReadValue<Vector2>();
+
+        // Determine how much should move in the x-direction
+        Vector3 movementX = moveValue.x * Vector3.right * maxMoveSpeed * Time.deltaTime;
+
+        // Determine how much should move in the z-direction
+        Vector3 movementZ = moveValue.y * Vector3.forward * maxMoveSpeed * Time.deltaTime;
+
+
+        /*
+        //old Input System
         // Determine how much should move in the x-direction
         Vector3 movementX = Input.GetAxis("Horizontal") * Vector3.right * maxMoveSpeed * Time.deltaTime;
 
         // Determine how much should move in the z-direction
         Vector3 movementZ = Input.GetAxis("Vertical") * Vector3.forward * maxMoveSpeed * Time.deltaTime;
+        */
+
 
         // Determine total movement
         Vector3 movement = transform.TransformDirection(movementZ + movementX);
