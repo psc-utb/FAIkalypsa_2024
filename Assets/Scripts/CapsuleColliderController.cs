@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CapsuleCollider))]
-public class ColliderController : MonoBehaviour
+public class CapsuleColliderController : MonoBehaviour
 {
     [SerializeField]
     float colliderRadius = 0.1f;

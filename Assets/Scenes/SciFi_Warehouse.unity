@@ -59096,10 +59096,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
@@ -59109,31 +59113,51 @@ PrefabInstance:
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
+      objectReference: {fileID: 4523749340959426667}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
       objectReference: {fileID: 4523749340959426650}
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: Deactivate
       objectReference: {fileID: 0}
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SphereColliderController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: NavMeshAgentActivator, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4525165900603740542, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
-      propertyPath: m_Radius
-      value: 0.55
+    - target: {fileID: 3414504763544519334, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: OnDeadUnity.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5210846870753802144, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: healthSystem
       value: 
       objectReference: {fileID: 4523749340959426660}
+    - target: {fileID: 6546190052640289521, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      propertyPath: colliderRadius
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       propertyPath: m_Name
       value: Ghoul@Animations
@@ -59434,6 +59458,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb9aa7183709da429076edc5294507b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4523749340959426667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2243210870583720874, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+  m_PrefabInstance: {fileID: 4523749340959426639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523749340959426640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6a6d3c564c0457b9ca98c5288d916d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SphereColliderController
 --- !u!1001 &4692395076754921914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61481,6 +61516,10 @@ PrefabInstance:
       propertyPath: healthSystem
       value: 
       objectReference: {fileID: 6935563455393768071}
+    - target: {fileID: 8628180208021046133, guid: 52899ce73aa67f44ea4537b2d6e00e95, type: 3}
+      propertyPath: colliderRadius
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
