@@ -768,12 +768,12 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: PlayerDistance
-    m_EventTreshold: 2.4
   - m_ConditionMode: 1
     m_ConditionEvent: PlayerIsVisible
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: PlayerDistance
+    m_EventTreshold: 2.4
   - m_ConditionMode: 1
     m_ConditionEvent: PlayerIsAlive
     m_EventTreshold: 0
