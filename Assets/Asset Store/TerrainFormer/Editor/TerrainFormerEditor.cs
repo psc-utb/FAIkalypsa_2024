@@ -7,6 +7,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Experimental.Rendering;
+using UnityEditor.TerrainTools;
+using UnityEditor.EditorTools;
 /**
 * A lot of the code (especially the Terrain Commands) is heavily optimized since it's not optimized by the compiler (seemingly all user 
 * Editor code isn't). It's necessity is further cemented by the fact that SetHeights and SetAlphamaps can be slower than running
@@ -265,36 +267,49 @@ namespace JesseStiller.TerrainFormerExtension {
             * when the user selects a different tool in Terrain Former. This makes it so the user can't accidentally
             * use two terain tools at once (eg. Unity Terrain's raise/lower, and Terrain Former's raise/lower)
             */
-            Type unityTerrainInspectorType = Assembly.GetAssembly(typeof(Editor)).GetType("UnityEditor.TerrainInspector");
-            unityTerrainSelectedTool = unityTerrainInspectorType.GetProperty("selectedTool", BindingFlags.NonPublic | BindingFlags.Instance);
-            
-            UnityEngine.Object[] terrainInspectors = Resources.FindObjectsOfTypeAll(unityTerrainInspectorType);
-            // Iterate through each Unity terrain inspector to find the Terrain Inspector(s) that belongs to this object
-            foreach(UnityEngine.Object inspector in terrainInspectors) {
-                Editor inspectorAsEditor = (Editor)inspector;
-                GameObject inspectorGameObject = ((Terrain)inspectorAsEditor.target).gameObject;
-                
-                if(inspectorGameObject == terrainFormer.gameObject) {
-                    unityTerrainInspectors.Add(inspector);
-                }
+
+            // --- FIND CURRENTLY SELECTED TOOL ---
+            var activeToolType = ToolManager.activeToolType;
+            bool isBuiltInTerrainTool =
+                activeToolType != null &&
+                activeToolType.Namespace != null &&
+                activeToolType.Namespace.StartsWith("UnityEditor.TerrainTools", StringComparison.Ordinal);
+
+            // TF tool type
+            bool isTerrainFormerTool = activeToolType == currentTool.GetType();
+
+            // (optional) exclusivity can be solved here:
+            // if (isBuiltInTerrainTool && isTerrainFormerTool) { /* solve conflict if neccessary (log/disable/etc.) */ }
+
+            // --- FIND INSPECTORS WHICH EDITS THIS TERRAIN (without internal types) ---
+            var unityTerrainInspectors = new List<Editor>();
+            foreach (var ed in Resources.FindObjectsOfTypeAll<Editor>())
+            {
+                if (ed == null) continue;
+                var targetTerrain = ed.target as Terrain;
+                if (targetTerrain == null) continue;
+
+                if (terrainFormer != null && targetTerrain.gameObject == terrainFormer.gameObject)
+                    unityTerrainInspectors.Add(ed);
             }
 
+            // --- CACHE BLOCKS ---
             heightsCacheBlocks = new HeightsCacheBlock[4];
-            for(int i = 0; i < heightsCacheBlocks.Length; i++) {
+            for (int i = 0; i < heightsCacheBlocks.Length; i++)
                 heightsCacheBlocks[i] = new HeightsCacheBlock(heightmapResolution);
-            }
 
             alphamapsCacheBlocks = new AlphamapsCacheBlock[4];
-            for(int i = 0; i < alphamapsCacheBlocks.Length; i++) {
+            for (int i = 0; i < alphamapsCacheBlocks.Length; i++)
                 alphamapsCacheBlocks[i] = new AlphamapsCacheBlock(alphamapResolution, splatPrototypes.Length);
-            }
-            
+
+            // --- ASSET WATCHER ---
             AssetWatcher.OnAssetsImported = OnAssetsImported;
             AssetWatcher.OnAssetsMoved = OnAssetsMoved;
             AssetWatcher.OnAssetsDeleted = OnAssetsDeleted;
             AssetWatcher.OnWillSaveAssetsAction = OnWillSaveAssets;
-            
+
             return true;
+
         }
 
         private static void InitialiseToolsGUIContents() {
