@@ -48,11 +48,19 @@ public class BulletCCScript : MonoBehaviour
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer(charactersLayerName))
                 {
                     Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+
                     var hitHealthSystem = hit.collider.gameObject.GetComponent<IGetHealthSystem>();
                     if (hitHealthSystem != null && hitHealthSystem.GetHealthSystem().IsDead() == false)
                     {
                         hitHealthSystem.GetHealthSystem().Damage(damage);
                     }
+
+                    var hitReactionRig = hit.collider.gameObject.GetComponent<HitReactionRig>();
+                    if (hitReactionRig != null)
+                    {
+                        hitReactionRig.ApplyHit(transform.forward);
+                    }
+
                     Destroy(gameObject);
                 }
             }

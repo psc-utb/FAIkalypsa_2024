@@ -13976,8 +13976,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662052997}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.308212, y: 0.10237555, z: -0.37027025, w: 0.8703015}
-  m_LocalPosition: {x: -0.29641783, y: 2.7312236, z: 0.609769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39772,6 +39772,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1552835126}
+    - targetCorrespondingSourceObject: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1552835127}
   m_SourcePrefab: {fileID: 100100000, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
 --- !u!4 &1552835121 stripped
 Transform:
@@ -39814,6 +39817,27 @@ MonoBehaviour:
   - m_Rig: {fileID: 2000967589}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &1552835127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552835125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f833f56ffef714991890bf9ce5eff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReactionRig
+  torsoOffsetTarget: {fileID: 662052998}
+  torsoRotationTarget: {fileID: 1953483435}
+  positionConstraint: {fileID: 2000967591}
+  rotationConstraint: {fileID: 2000967590}
+  offsetStrength: 0.1
+  rotationStrength: 15
+  blendInTime: 0.1
+  holdTime: 0.2
+  blendOutTime: 0.3
 --- !u!1001 &1553127205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54356,13 +54380,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953483434}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.308212, y: 0.10237555, z: -0.37027025, w: 0.8703015}
-  m_LocalPosition: {x: -0.29641783, y: 2.7312236, z: 0.609769}
+  m_LocalRotation: {x: 0.17101006, y: -0.030153684, z: 0.17101006, w: 0.96984637}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2000967592}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 20}
 --- !u!1001 &1960804190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55440,7 +55464,6 @@ GameObject:
   - component: {fileID: 2000967589}
   - component: {fileID: 2000967591}
   - component: {fileID: 2000967590}
-  - component: {fileID: 2000967593}
   m_Layer: 8
   m_Name: Rig
   m_TagString: Untagged
@@ -55573,27 +55596,6 @@ Transform:
   - {fileID: 1953483435}
   m_Father: {fileID: 1552835124}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2000967593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000967588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2f833f56ffef714991890bf9ce5eff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HitReactionRig
-  torsoOffsetTarget: {fileID: 662052998}
-  torsoRotationTarget: {fileID: 1953483435}
-  positionConstraint: {fileID: 2000967591}
-  rotationConstraint: {fileID: 2000967590}
-  offsetStrength: 0.1
-  rotationStrength: 15
-  blendInTime: 0.1
-  holdTime: 0.2
-  blendOutTime: 0.3
 --- !u!1001 &2011562366
 PrefabInstance:
   m_ObjectHideFlags: 0
