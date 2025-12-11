@@ -5,8 +5,8 @@ using System.Collections;
 public class HitReactionRig : MonoBehaviour
 {
     [Header("Rig Targets")]
-    public Transform torsoOffsetTarget;       // Target for Multi-PositionConstraint
-    public Transform torsoRotationTarget;     // Target for Multi-RotationConstraint
+    public Transform offsetTarget;       // Target for Multi-PositionConstraint
+    public Transform rotationTarget;     // Target for Multi-RotationConstraint
 
     [Header("Constraints")]
     public MultiPositionConstraint positionConstraint;
@@ -24,8 +24,10 @@ public class HitReactionRig : MonoBehaviour
 
     void Awake()
     {
-        initialOffsetPos = torsoOffsetTarget.localPosition;
-        initialRotation = torsoRotationTarget.localRotation;
+        if (offsetTarget)
+            initialOffsetPos = offsetTarget.localPosition;
+        if(rotationTarget)
+            initialRotation = rotationTarget.localRotation;
     }
 
     /// <summary>
@@ -48,8 +50,10 @@ public class HitReactionRig : MonoBehaviour
     private IEnumerator FlinchRoutine(Vector3 offset, Quaternion rotation)
     {
         // Set targets
-        torsoOffsetTarget.localPosition = initialOffsetPos + offset;
-        torsoRotationTarget.localRotation = initialRotation * rotation;
+        if (offsetTarget)
+            offsetTarget.localPosition = initialOffsetPos + offset;
+        if (rotationTarget)
+            rotationTarget.localRotation = initialRotation * rotation;
 
         // Blend IN
         yield return StartCoroutine(BlendWeight(0f, 1f, blendInTime));
@@ -61,8 +65,10 @@ public class HitReactionRig : MonoBehaviour
         yield return StartCoroutine(BlendWeight(1f, 0f, blendOutTime));
 
         // Reset targets
-        torsoOffsetTarget.localPosition = initialOffsetPos;
-        torsoRotationTarget.localRotation = initialRotation;
+        if(offsetTarget)
+            offsetTarget.localPosition = initialOffsetPos;
+        if (rotationTarget)
+            rotationTarget.localRotation = initialRotation;
     }
 
     private IEnumerator BlendWeight(float from, float to, float duration)
@@ -72,8 +78,10 @@ public class HitReactionRig : MonoBehaviour
         {
             t += Time.deltaTime;
             float w = Mathf.Lerp(from, to, t / duration);
-            positionConstraint.weight = w;
-            rotationConstraint.weight = w;
+            if(positionConstraint)
+                positionConstraint.weight = w;
+            if (rotationConstraint)
+                rotationConstraint.weight = w;
             yield return null;
         }
     }
