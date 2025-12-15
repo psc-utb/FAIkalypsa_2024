@@ -32,8 +32,8 @@ public class BulletCCScript : MonoBehaviour
 	*/
     void Update()
     {
-
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, ~ignoreLayer))
+        Ray ray = new Ray(transform.position, transform.forward);
+        if (Physics.Raycast(ray, out hit, maxDistance, ~ignoreLayer))
         {
             if (decalHitWall)
             {
@@ -58,7 +58,8 @@ public class BulletCCScript : MonoBehaviour
                     var hitReactionRig = hit.collider.gameObject.GetComponent<HitReactionRig>();
                     if (hitReactionRig != null)
                     {
-                        hitReactionRig.ApplyHit(transform.forward);
+                        Vector3 incoming = (hit.point - ray.origin).normalized;
+                        hitReactionRig.ApplyHit(incoming);
                     }
 
                     Destroy(gameObject);
