@@ -5,19 +5,30 @@ using System.Collections;
 public class HitReactionRig : MonoBehaviour
 {
     [Header("Rig Targets")]
-    public Transform offsetTarget;       // Target for Multi-PositionConstraint
-    public Transform rotationTarget;     // Target for Multi-RotationConstraint
+    [SerializeField]
+    private Transform offsetTarget;       // Target for Multi-PositionConstraint
+    [SerializeField]
+    private Transform rotationTarget;     // Target for Multi-RotationConstraint
 
     [Header("Constraints")]
-    public MultiPositionConstraint positionConstraint;
-    public MultiRotationConstraint rotationConstraint;
+    [SerializeField]
+    private MultiPositionConstraint positionConstraint;
+    [SerializeField]
+    private MultiRotationConstraint rotationConstraint;
 
     [Header("Settings")]
-    public float offsetStrength = 0.1f;       // Translate strength (meters)
-    public float rotationStrength = 15f;      // Rotation strength (degrees)
-    public float blendInTime = 0.1f;          // How fast the weight will increase
-    public float holdTime = 0.2f;             // How long the effect will last
-    public float blendOutTime = 0.3f;         // How fast the efect comes back to the initial position and rotation
+    [SerializeField]
+    private float offsetStrength = 0.1f;       // Translate strength (meters)
+    [SerializeField]
+    private float pitchStrength = 15f;         // Pitch rotation strength (degrees)
+    [SerializeField]
+    private float rollStrength   = 8f;         // Roll rotation strength (degrees)
+    [SerializeField]
+    private float blendInTime = 0.1f;          // How fast the weight will increase
+    [SerializeField]
+    private float holdTime = 0.2f;             // How long the effect will last
+    [SerializeField]
+    private float blendOutTime = 0.3f;         // How fast the efect comes back to the initial position and rotation
 
     private Vector3 initialOffsetPos;
     private Quaternion initialRotation;
@@ -41,10 +52,11 @@ public class HitReactionRig : MonoBehaviour
         Vector3 offset = new Vector3(localDir.x, 0, -localDir.z) * offsetStrength;
 
         // Rotation based on hit direction (light rotation of the chest)
-        Quaternion rotation = Quaternion.Euler(localDir.z * rotationStrength, 0, -localDir.x * rotationStrength);
+        Quaternion rotation = Quaternion.Euler(localDir.z * rollStrength, 0, -localDir.x * pitchStrength);
 
         StopAllCoroutines();
         StartCoroutine(FlinchRoutine(offset, rotation));
+
     }
 
     private IEnumerator FlinchRoutine(Vector3 offset, Quaternion rotation)
