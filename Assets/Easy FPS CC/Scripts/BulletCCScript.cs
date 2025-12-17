@@ -62,6 +62,14 @@ public class BulletCCScript : MonoBehaviour
                         hitReactionRig.ApplyHit(incoming);
                     }
 
+
+                    var hitReactionRagdoll = hit.collider.gameObject.GetComponentInParent<HitReactionRagdoll>();
+                    if (hitReactionRagdoll != null)
+                    {
+                        Vector3 incoming = (hit.point - ray.origin).normalized;
+                        hitReactionRagdoll.ReportHit(incoming, hit.point, 10);
+                    }
+
                     Destroy(gameObject);
                 }
             }

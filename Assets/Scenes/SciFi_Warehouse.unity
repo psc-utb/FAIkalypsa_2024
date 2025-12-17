@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.MultiRotationConstraint
   m_Weight: 0
   m_Data:
-    m_ConstrainedObject: {fileID: 821175129}
+    m_ConstrainedObject: {fileID: 1073293637}
     m_SourceObjects:
       m_Length: 1
       m_Item0:
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.MultiPositionConstraint
   m_Weight: 0
   m_Data:
-    m_ConstrainedObject: {fileID: 821175129}
+    m_ConstrainedObject: {fileID: 1073293637}
     m_SourceObjects:
       m_Length: 1
       m_Item0:
@@ -23463,6 +23463,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 821175137}
+    - targetCorrespondingSourceObject: {fileID: 8445928740715401116, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2047152525}
     - targetCorrespondingSourceObject: {fileID: 8445928740715400718, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1073293642}
@@ -23582,11 +23585,6 @@ Transform:
 --- !u!4 &821175128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8445928740715565586, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
-  m_PrefabInstance: {fileID: 821175125}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &821175129 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8445928740715565650, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
   m_PrefabInstance: {fileID: 821175125}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &821175130 stripped
@@ -23730,7 +23728,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -23826,7 +23824,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -30378,6 +30376,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8445928740715400718, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
   m_PrefabInstance: {fileID: 821175125}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1073293637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8445928740715565648, guid: 7a956c60f421ce142934dc18f1d2657d, type: 3}
+  m_PrefabInstance: {fileID: 821175125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &1073293638
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30401,7 +30404,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -30428,7 +30431,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -30815,7 +30818,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -38625,7 +38628,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -41222,7 +41225,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -42211,7 +42214,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -46223,7 +46226,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -46319,7 +46322,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -47600,7 +47603,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -59141,6 +59144,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 528f6c40ba01da34f96f492e501fd927, type: 3}
+--- !u!114 &2047152525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821175126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774361bf6b71845008f0624b37831220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReactionRagdoll
+  ragdollThreshold: 35
+  impulseBase: 2.5
+  coreRigidBody: {fileID: 1073293638}
+  sleepVelocityThreshold: 0.05
+  recoverCheckDelay: 0.5
+  timeWindowDuration: 1.25
 --- !u!1001 &2049760701
 PrefabInstance:
   m_ObjectHideFlags: 0
